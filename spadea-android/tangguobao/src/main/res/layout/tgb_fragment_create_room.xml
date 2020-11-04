@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="289dp"
+    android:layout_height="276dp"
+    android:background="@drawable/tgb_bg_record_list">
+
+    <com.yutang.game.tangguobao.widget.StrokeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:includeFontPadding="false"
+        android:text="创建房间"
+        android:textColor="#FFF3C1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#CA6019"
+        app:strokeWidth="2dp" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="270dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/iv_cancel"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_round"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="23dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="局数:"
+                android:textColor="#86C4D0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <GridView
+                android:id="@+id/gv_round"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="10dp"
+                android:numColumns="3"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_round" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="23dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="弹珠袋:"
+                android:textColor="#86C4D0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gv_round" />
+
+            <GridView
+                android:id="@+id/gv_sugar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="10dp"
+                android:numColumns="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gv_round" />
+
+            <TextView
+                android:id="@+id/tv_ruler"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="23dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="接龙:"
+                android:textColor="#86C4D0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gv_sugar" />
+
+            <RadioGroup
+                android:id="@+id/rg_game_ruler"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_ruler">
+
+                <RadioButton
+                    android:id="@+id/rb_low_jielong"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableStart="@drawable/tgb_selector_rb"
+                    android:drawablePadding="3dp"
+                    android:text="最低接龙"
+                    android:textColor="#F7E35C"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_high_jielong"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableStart="@drawable/tgb_selector_rb"
+                    android:drawablePadding="3dp"
+                    android:text="最高接龙"
+                    android:textColor="#F7E35C"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_player_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
+                android:includeFontPadding="false"
+                android:text="人数:"
+                android:textColor="#86C4D0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ruler" />
+
+            <LinearLayout
+                android:id="@+id/ll_player_count"
+                android:layout_width="102dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="75dp"
+                android:background="@drawable/tgb_bg_player_count"
+                app:layout_constraintBottom_toBottomOf="@id/tv_player_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_player_count">
+
+                <TextView
+                    android:id="@+id/tv_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#E89E6C"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/tgb_ic_record_expand" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_bond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
+                android:includeFontPadding="false"
+                android:text="保证金:"
+                android:textColor="#86C4D0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_player_count" />
+
+            <RadioGroup
+                android:id="@+id/rg_bond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_bond">
+
+                <RadioButton
+                    android:id="@+id/rb_money_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableStart="@drawable/tgb_selector_rb"
+                    android:drawablePadding="3dp"
+                    android:text="500"
+                    android:textColor="#F7E35C"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="22dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/tgb_btn_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_create"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="22dp"
+        android:src="@drawable/tgb_btn_create_room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

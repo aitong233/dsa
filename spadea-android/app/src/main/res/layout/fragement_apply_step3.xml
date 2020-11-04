@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.spadea.xqipao.widget.QualificationApplyStateView
+                android:id="@+id/step_view"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="298dp"
+                android:layout_height="197dp"
+                android:layout_marginTop="@dimen/dp_44"
+                android:src="@mipmap/image_idcard_success" />
+
+            <TextView
+                android:id="@+id/tv_tip_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交成功，审核时间1~3工作日"
+                android:textColor="#AFAFAF"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="@dimen/dp_139"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/bg_r99_gradient_main"
+                android:gravity="center"
+                android:text="返回首页"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

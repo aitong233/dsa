@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp">
+
+        <View
+            android:id="@+id/view_top2"
+            android:layout_width="70dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/view_top1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_top1" />
+
+        <View
+            android:id="@+id/view_top1"
+            android:layout_width="70dp"
+            android:layout_height="88dp"
+            app:layout_constraintEnd_toStartOf="@+id/view_top3"
+            app:layout_constraintStart_toEndOf="@id/view_top2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_top3"
+            android:layout_width="70dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_top1"
+            app:layout_constraintTop_toTopOf="@id/view_top1" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/room_rank_top2_headIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/view_top2"
+            app:layout_constraintTop_toTopOf="@id/view_top2"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@mipmap/room_index_head_image_top2"
+            app:layout_constraintBottom_toBottomOf="@id/view_top2"
+            app:layout_constraintEnd_toEndOf="@id/view_top2"
+            app:layout_constraintStart_toStartOf="@id/view_top2"
+            app:layout_constraintTop_toTopOf="@id/view_top2" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/room_rank_top1_headIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintStart_toStartOf="@id/view_top1"
+            app:layout_constraintTop_toTopOf="@id/view_top1"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@mipmap/room_index_head_image_top1"
+            app:layout_constraintBottom_toBottomOf="@id/view_top1"
+            app:layout_constraintEnd_toEndOf="@id/view_top1"
+            app:layout_constraintStart_toStartOf="@id/view_top1"
+            app:layout_constraintTop_toTopOf="@id/view_top1" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/room_rank_top3_headIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/view_top3"
+            app:layout_constraintTop_toTopOf="@id/view_top3"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@mipmap/room_index_head_image_top3"
+            app:layout_constraintBottom_toBottomOf="@id/view_top3"
+            app:layout_constraintEnd_toEndOf="@id/view_top3"
+            app:layout_constraintStart_toStartOf="@id/view_top3"
+            app:layout_constraintTop_toTopOf="@id/view_top3" />
+
+        <TextView
+            android:id="@+id/room_top2_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingBottom="3dp"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/view_top2"
+            app:layout_constraintStart_toStartOf="@id/view_top2"
+            app:layout_constraintTop_toBottomOf="@+id/view_top2"
+            tools:text="sdfdfgfg" />
+
+        <TextView
+            android:id="@+id/room_top1_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingBottom="3dp"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/view_top1"
+            app:layout_constraintStart_toStartOf="@id/view_top1"
+            app:layout_constraintTop_toBottomOf="@+id/view_top1"
+            tools:text="sdfdfgfg" />
+
+        <TextView
+            android:id="@+id/room_top3_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingBottom="3dp"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/view_top3"
+            app:layout_constraintStart_toStartOf="@id/view_top3"
+            app:layout_constraintTop_toBottomOf="@id/view_top3"
+            tools:text="sdfdfgfg" />
+
+        <TextView
+            android:id="@+id/room_head_top2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="23dp"
+            android:background="@mipmap/common_bg_rank_wealth"
+            android:gravity="center"
+            android:paddingLeft="22dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/color_white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/view_top2"
+            app:layout_constraintTop_toTopOf="@id/view_top2"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/room_head_top1_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="23dp"
+            android:background="@mipmap/common_bg_rank_wealth"
+            android:gravity="center"
+            android:paddingLeft="22dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/color_white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/view_top1"
+            app:layout_constraintTop_toTopOf="@id/view_top1"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/room_head_top3_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="23dp"
+            android:background="@mipmap/common_bg_rank_wealth"
+            android:gravity="center"
+            android:paddingLeft="22dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/color_white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/view_top3"
+            app:layout_constraintTop_toTopOf="@id/view_top3"
+            tools:text="0" />
+
+        <LinearLayout
+            android:id="@+id/ll_vip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/view_top2"
+            app:layout_constraintStart_toStartOf="@id/view_top2"
+            app:layout_constraintTop_toBottomOf="@id/room_top2_name">
+
+            <ImageView
+                android:id="@+id/room_top2_label"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/room_top2_grade"
+                android:layout_width="31dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/view_top1"
+            app:layout_constraintStart_toStartOf="@id/view_top1"
+            app:layout_constraintTop_toBottomOf="@id/room_top1_name">
+
+            <ImageView
+                android:id="@+id/room_top1_label"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/room_top1_grade"
+                android:layout_width="31dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/view_top3"
+            app:layout_constraintStart_toStartOf="@id/view_top3"
+            app:layout_constraintTop_toBottomOf="@id/room_top3_name">
+
+            <ImageView
+                android:id="@+id/room_top3_label"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/room_top3_grade"
+                android:layout_width="31dp"
+                android:layout_height="24dp"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <!--        <android.support.constraint.ConstraintLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:paddingRight="20dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/hat3"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:src="@mipmap/room_browncrowm_image"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintHorizontal_bias="0.79"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent"-->
+        <!--                app:layout_constraintVertical_bias="0.33" />-->
+
+        <!--            <com.makeramen.roundedimageview.RoundedImageView-->
+        <!--                android:id="@+id/room_rank_top3_headIcon"-->
+        <!--                android:layout_width="58dp"-->
+        <!--                android:layout_height="61dp"-->
+        <!--                android:src="@color/white"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent"-->
+        <!--                app:riv_border_color="#A0795D"-->
+        <!--                app:riv_border_width="2.5dp"-->
+        <!--                app:riv_oval="true" />-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/head_label_top3_icon"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:src="@mipmap/room_thirdmedal_image"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent"-->
+        <!--                app:layout_constraintVertical_bias="0.68" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/room_top3_name"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:ellipsize="end"-->
+        <!--                android:gravity="center"-->
+        <!--                android:maxLines="1"-->
+        <!--                android:text="XXXX"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="14sp"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toBottomOf="@+id/head_label_top3_icon" />-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center_vertical"-->
+        <!--                android:orientation="horizontal"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toBottomOf="@+id/room_top3_name">-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/room_top3_label"-->
+        <!--                    android:layout_width="24dp"-->
+        <!--                    android:layout_height="24dp" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/room_top3_grade"-->
+        <!--                    android:layout_width="31dp"-->
+        <!--                    android:layout_height="14dp" />-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/room_head_top3_label"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:background="@mipmap/room_index_bg_ranking_charm_mm"-->
+        <!--                android:ellipsize="end"-->
+        <!--                android:gravity="center_vertical"-->
+        <!--                android:maxLines="1"-->
+        <!--                android:paddingLeft="20dp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="10sp"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintRight_toLeftOf="@+id/hat3"-->
+        <!--                app:layout_constraintTop_toTopOf="parent"-->
+        <!--                app:layout_constraintVertical_bias="0.32" />-->
+
+        <!--        </android.support.constraint.ConstraintLayout>-->
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rankRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        tools:listitem="@layout/room_rv_item_ranking">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

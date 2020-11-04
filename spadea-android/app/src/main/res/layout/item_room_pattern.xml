@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_patter_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_5"
+    android:layout_marginRight="@dimen/dp_5"
+    android:background="@drawable/bg_room_pattern_select"
+    android:paddingLeft="@dimen/dp_13"
+    android:paddingTop="@dimen/dp_8"
+    android:paddingRight="@dimen/dp_13"
+    android:paddingBottom="@dimen/dp_8"
+    android:text="普通"
+    android:textColor="#ff000000"
+    android:textSize="@dimen/sp_14">
+
+</TextView>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <com.spadea.xqipao.widget.IdentifyEditView
+                android:id="@+id/iev_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_20"
+                app:id_hint="请输入姓名"
+                app:id_icon="@mipmap/ic_name_identify"
+                app:id_input_type="0"
+                app:id_title="姓名" />
+
+            <com.spadea.xqipao.widget.IdentifyEditView
+                android:id="@+id/iev_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                app:id_hint="请输入身份证号"
+                app:id_icon="@mipmap/ic_idcard_identify"
+                app:id_input_type="2"
+                app:id_title="身份证号" />
+
+            <com.spadea.xqipao.widget.IdentifyEditView
+                android:id="@+id/iev_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                android:visibility="gone"
+                app:id_hint="请输入手机号"
+                app:id_icon="@mipmap/ic_phone_identify"
+                app:id_input_type="1"
+                app:id_title="手机号" />
+
+            <com.spadea.xqipao.widget.IdentifyCodeView
+                android:id="@+id/icv_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_tip_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="备注："
+                android:textColor="@color/color_9c9c9c"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_remark1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="需要提供姓名、身份证号、手机号、手机号验证码，跳转支付宝认证页面"
+                    android:textColor="@color/color_c9c9c9"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tv_remark2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="需要提供姓名、身份证号、手机号、手机号验证码，跳转支付宝认证页面"
+                    android:textColor="@color/color_c9c9c9"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_r99_gradient_main"
+        android:gravity="center"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17"
+        android:textStyle="bold" />
+</RelativeLayout>

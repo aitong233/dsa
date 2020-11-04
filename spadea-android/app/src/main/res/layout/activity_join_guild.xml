@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/view_top_bar" />
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="@dimen/dp_335"
+        android:layout_height="@dimen/dp_24"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/et_id"
+        app:layout_constraintEnd_toEndOf="@+id/et_id"
+        app:layout_constraintStart_toStartOf="@+id/et_id" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="@dimen/dp_335"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/bg_r99_white"
+        android:hint="请输入公会ID"
+        android:inputType="number"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:maxLength="10"
+        android:textColorHint="@color/color_545454"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <TextView
+        android:id="@+id/tv_guild"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_r10_bottom_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:textColor="@color/color_9c9c9c"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintDimensionRatio="355:44"
+        app:layout_constraintEnd_toEndOf="@id/et_id"
+        app:layout_constraintStart_toStartOf="@id/et_id"
+        app:layout_constraintTop_toBottomOf="@id/et_id"
+        tools:text="Randall Burton" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tv_guild,top" />
+
+    <ImageView
+        android:id="@+id/iv_shadow"
+        android:layout_width="@dimen/dp_355"
+        android:layout_height="@dimen/dp_68"
+        android:background="@mipmap/bg_shadow_join_guild"
+        android:contentDescription="@null"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/et_id"
+        app:layout_constraintEnd_toEndOf="@id/et_id"
+        app:layout_constraintStart_toStartOf="@id/et_id"
+        app:layout_constraintTop_toTopOf="@id/et_id" />
+
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_r99_b4b4b4"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="申请加入"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="355:52"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

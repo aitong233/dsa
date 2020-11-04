@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <item android:drawable="@mipmap/room_ic_bottom_message" />
+    <item android:drawable="@drawable/room_red_point" />
+
+</layer-list>

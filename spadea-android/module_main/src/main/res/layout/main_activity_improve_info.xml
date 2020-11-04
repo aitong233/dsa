@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="50dip"
+        android:drawableRight="@mipmap/main_ic_improve_info_right"
+        android:drawablePadding="5dp"
+        android:text="完善资料"
+        android:textColor="@color/color_black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <com.qpyy.libcommon.widget.ClearEditText
+        android:id="@+id/ed_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dip"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/main_bg_sex_uncheck"
+        android:hint="请输入昵称"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:singleLine="true"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_sex"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_selector_sex">
+
+            <RadioButton
+                android:id="@+id/rb_nan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@mipmap/main_sex_boy"
+                android:drawablePadding="30dip"
+                android:text="男生"
+                android:textColor="#FF5390FF"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/main_selector_sex">
+
+            <RadioButton
+                android:id="@+id/rb_nv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:drawableLeft="@mipmap/main_sex_girl"
+                android:drawablePadding="30dip"
+                android:gravity="center"
+                android:text="女生"
+                android:textColor="#FFFF8890"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/main_bg_primary_gradient_corner_99"
+        android:gravity="center"
+        android:text="开启黑桃A之旅"
+        android:textColor="#fffefefe"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+
+    <declare-styleable name="RoomDefaultWheatView">
+        <attr name="room_wheat_number" format="string" />
+    </declare-styleable>
+    <declare-styleable name="RoomStationWheatView">
+        <attr name="room_station_wheat_number" format="string" />
+        <attr name="room_station_pic" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--说话动态图-->
+        <com.opensource.svgaplayer.SVGAImageView
+            android:id="@+id/iv_ripple1"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_75"
+            app:autoPlay="true"
+            app:source="ripple.svga" />
+        <!--上麦-->
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+           />
+
+        <!--头像-->
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:riv_oval="true" />
+
+        <!--        动画表情-->
+        <ImageView
+            android:id="@+id/svga"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <!--        王冠-->
+        <ImageView
+            android:id="@+id/iv_crown"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/medal_icon_di" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_user"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_7_67aff9"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_2"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_7"
+            android:paddingBottom="@dimen/dp_3">
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_fff"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#ff67aff9"
+                android:textSize="@dimen/sp_6" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_toRightOf="@+id/tv_number"
+                android:singleLine="true"
+                android:text="NO.花瓶"
+                android:textColor="#ffffffff"
+                android:textSize="8sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

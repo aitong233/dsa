@@ -1,0 +1,172 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.mob.sdk'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        //MQTT配置和OSS bucketname配置 
+        release {
+            buildConfigField "String", "BASE_URL", '""'
+            buildConfigField "String", "BUGLY_APPID", '""'
+            buildConfigField "String", "SALT", '""'
+            buildConfigField "String", "EMQTT_URL", '""'
+            buildConfigField "String", "BUCKET_NAME", '""'
+            buildConfigField "String", "EMQTT_USER", '""'
+            buildConfigField "String", "EMQTT_PASSWORD", '""'
+        }
+
+        debug{
+            //测试
+            buildConfigField "String", "BASE_URL", '""'
+            buildConfigField "String", "BUGLY_APPID", '""'
+            buildConfigField "String", "SALT", '""'
+            buildConfigField "String", "EMQTT_URL", '""'
+            buildConfigField "String", "BUCKET_NAME", '""'
+            buildConfigField "String", "EMQTT_USER", '""'
+            buildConfigField "String", "EMQTT_PASSWORD", '""'
+        }
+    }
+}
+
+greendao {
+    schemaVersion 1 //当前数据库版本
+    daoPackage 'com.qpyy.libcommon.db'
+// 设置DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'
+}
+
+
+MobSDK {
+    appKey ""
+    appSecret ""
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                appId ""
+                appSecret ""
+                sortId "1"
+            }
+            WechatMoments {
+                appId ""
+                appSecret ""
+                sortId "2"
+            }
+            QQ {
+                appId ""
+                appKey ""
+                sortId "3"
+            }
+            QZone {
+                appId ""
+                appKey ""
+                sortId "4"
+            }
+        }
+    }
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    // Support libraries
+    api deps.support.app_compat
+    api deps.support.v4
+    api deps.support.v13
+    api deps.support.design
+    api deps.support.cardview
+    api deps.support.percent
+    api deps.support.recyclerview
+    api deps.constraint_layout
+
+    // RxJava and retrofit
+    api deps.rx_android
+    api deps.rxjava2
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.logging_interceptor
+    api deps.retrofit.rxjava2_adapter
+
+    // other
+    api deps.event_bus
+    api deps.gson
+    api deps.fastjson
+    api deps.utils
+    // webpdecoder
+    api deps.glide_webp
+    api deps.glide
+    api deps.glide_transformations
+    api deps.persistent_cookie
+    api deps.flexbox
+
+    //view
+    api deps.butterknife_api
+    api deps.logger
+    api deps.toast
+    api deps.smart_refresh_layout
+    api deps.smart_refresh_header
+    api deps.recycle_view_adpater_helper
+    api deps.rounded_image
+    api project(':FlycoTabLayout_Lib')
+    api project(':picker-view')
+    api project(':library_picture')
+    api 'com.cpiz.bubbleview:bubbleview:1.0.2'
+    api 'com.github.lihangleo2:ShadowLayout:2.1.8'
+    api 'com.github.xiaohaibin:XBanner:1.7.0'
+    api 'com.lahm.library:easy-protector-release:1.1.2'
+    api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    api 'com.aliyun.dpa:oss-android-sdk:+'
+    api 'com.shuyu:GSYVideoPlayer:3.0.0'
+    api 'org.greenrobot:greendao:3.2.2'
+    api 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    api 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    api 'org.greenrobot:eventbus:3.1.1'
+    api 'com.jungly:gridPasswordView:0.3'
+    api 'org.glassfish:javax.annotation:10.0-b28'
+    api 'com.github.yyued:SVGAPlayer-Android:2.5.8'
+    api 'de.hdodenhof:circleimageview:3.1.0'
+
+    //router
+    api deps.arouter_api
+
+    //游戏
+    api project(path: ':Grabmarbles')
+    api project(path: ':tangguobao')
+
+    //annotationProcessor
+    annotationProcessor deps.butterknife_compiler
+    annotationProcessor deps.arouter_compiler
+    annotationProcessor deps.glide_compiler
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    debugApi deps.leakcanary
+    api "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+}

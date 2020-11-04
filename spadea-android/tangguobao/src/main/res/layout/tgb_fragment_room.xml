@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="322dp"
+    android:layout_height="420dp"
+    android:background="@drawable/tgb_bg_main">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="43dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/tgb_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_record"
+        android:layout_width="43dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/tgb_btn_room_record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="106dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="24dp"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="10dp"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="3dp"
+        android:includeFontPadding="false"
+        android:text="抢弹珠倒计时："
+        android:textColor="#A0C4B8"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/iv_box"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_open_time"
+        android:textColor="#FFE329"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_box"
+        android:layout_width="190dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/tgb_bg_box_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svgaSelfopen"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"
+        app:autoPlay="false"
+        app:clearsAfterStop="false"
+        app:fillMode="Backward"
+        app:layout_constraintBottom_toBottomOf="@id/iv_box"
+        app:layout_constraintDimensionRatio="177:215"
+        app:layout_constraintEnd_toEndOf="@id/iv_box"
+        app:layout_constraintStart_toStartOf="@id/iv_box"
+        app:layout_constraintTop_toTopOf="@id/iv_box"
+        app:loopCount="1"
+        app:source="self_open.svga" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="190dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:text="局数：0/5"
+            android:textColor="#D37827"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_player_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:text="人数：0/5"
+            android:textColor="#D37827"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.yutang.game.tangguobao.widget.StrokeTextView
+            android:id="@+id/tv_candy_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="弹珠数量"
+            android:textColor="#DA4917"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#FFEED0"
+            app:strokeWidth="2dp" />
+
+        <com.yutang.game.tangguobao.widget.StrokeTextView
+            android:id="@+id/tv_candy_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:text="100"
+            android:textColor="#DB2B22"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#FFE97F"
+            app:strokeWidth="2dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/btn_prepare"
+            android:layout_width="97dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="39dp"
+            android:background="@drawable/tgb_btn_prepared"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_zb_text"
+                android:layout_width="41dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/tgb_pic_zb_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.yutang.game.tangguobao.widget.StrokeTextView
+                android:id="@+id/tv_prepare_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:includeFontPadding="false"
+                android:text="(5)"
+                android:textColor="#91AB28"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_zb_text"
+                app:layout_constraintStart_toEndOf="@id/iv_zb_text"
+                app:layout_constraintTop_toTopOf="@id/iv_zb_text"
+                app:strokeColor="#E6FAC6"
+                app:strokeWidth="1dp" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_cancel_prepare"
+            android:layout_width="97dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="39dp"
+            android:src="@drawable/tgb_btn_cancel_prepared"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_start"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/tgb_btn_start"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.yutang.game.tangguobao.widget.StrokeTextView
+            android:id="@+id/tv_result_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:text="获得弹珠"
+            android:textColor="#DA4917"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#FFEED0"
+            app:strokeWidth="2dp" />
+
+        <com.yutang.game.tangguobao.widget.StrokeTextView
+            android:id="@+id/tv_result_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:includeFontPadding="false"
+            android:text="48"
+            android:textColor="#DB2B22"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#FFE97F"
+            app:strokeWidth="2dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_ruler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:includeFontPadding="false"
+        android:text="最小接龙:"
+        android:textColor="#A0C4B8"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_box" />
+
+
+    <include
+        android:id="@+id/layout_jielong_player"
+        layout="@layout/tgb_item_player"
+        android:layout_width="106dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="33dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_box" />
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svgaStartGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoPlay="false"
+        app:clearsAfterStop="true"
+        app:loopCount="1"
+        app:source="startgame.svga" />
+
+
+</android.support.constraint.ConstraintLayout>

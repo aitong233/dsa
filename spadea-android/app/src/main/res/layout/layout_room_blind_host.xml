@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.spadea.xqipao.utils.view.room.HostWheatView
+            android:id="@+id/host_wheat"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dp_13"
+            app:User_Visibility="false"
+            android:layout_height="wrap_content"></com.spadea.xqipao.utils.view.room.HostWheatView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/host_wheat"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是主持"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_11"
+                android:text="编辑公告"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bg_ranking_bg"></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_trophy"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12450.52w"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_12"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:paddingLeft="@dimen/dp_22"
+        android:paddingRight="@dimen/dp_22">
+
+
+        <TextView
+            android:id="@+id/tv_self_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/level_speed"
+            android:paddingLeft="@dimen/dp_19"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_19"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="自我介绍"
+            android:textColor="#ffff8890"
+            android:textSize="@dimen/sp_10" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_select"
+            android:layout_toRightOf="@+id/tv_self_introduction"
+            android:background="@drawable/line_qrcode_show"></View>
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/level_speed"
+            android:paddingLeft="@dimen/dp_19"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_19"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="点击进入心动选择"
+            android:textColor="#ffff8890"
+            android:textSize="@dimen/sp_10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_publish"
+            android:layout_toRightOf="@+id/tv_select"
+            android:background="@drawable/line_qrcode_show"></View>
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/level_speed"
+            android:paddingLeft="@dimen/dp_19"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_19"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="公布心动"
+            android:textColor="#ffff8890"
+            android:textSize="@dimen/sp_10" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

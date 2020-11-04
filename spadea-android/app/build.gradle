@@ -1,0 +1,308 @@
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.mob.sdk'
+apply plugin: 'bugly'
+apply plugin: 'com.tendcloud.codelessplugin'
+
+bugly {
+    appId = 'e445dade8e' // 注册时分配的App ID
+    appKey = '445212ec-815c-4d23-ac07-1f488e7412ca' // 注册时分配的App Key
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        applicationId "com.spadea.yuyin"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0.0"
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+
+//            abiFilters 'armeabi-v7a ', 'armeabi', 'x86', 'x86_64', 'arm64-v8a'
+            abiFilters 'armeabi'
+        }
+//        极光推送：
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                CHANNEL_ID   : "default",
+        ]
+        signingConfig signingConfigs.debug
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        AROUTER_MODULE_NAME: project.getName(),
+                        eventBusIndex      : 'com.spadea.yuyin.MyEventBusIndex'
+                ]
+
+            }
+        }
+    }
+//
+//    signingConfigs {
+//        debug {
+//            storeFile file("")
+//            storePassword ""
+//            keyAlias ""
+//            keyPassword ""
+//
+//        }
+//        release {
+//            storeFile file("")
+//            storePassword ""
+//            keyAlias ""
+//            keyPassword ""
+//        }
+//    }
+
+
+    buildTypes {
+        //此处配置无效
+        debug {
+            manifestPlaceholders = [
+                    EASEMOB_APPKEY: "",
+                    JPUSH_APPKEY  : "",
+            ]
+            buildConfigField "String", "EMQTT_URL", '""'
+            buildConfigField "String", "AGORA_APP_ID", '""'
+            buildConfigField "String", "JAVA_BASE_URL", '""'
+            buildConfigField "String", "EMQTT_USER", '""'
+            buildConfigField "String", "EMQTT_PASSWORD", '""'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+            applicationVariants.all { variant ->
+                if (variant.buildType.name.equals('release')) { //如果是release版本
+                    variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/apks")
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) { //查找所有的apk
+                            def fileName = "a_${versionName}_${versionCode}_${releaseTime()}.apk"
+                            //重新定义apk的名称
+                            output.outputFileName = fileName //outputFile.parent参数可以改成你你想要的发布路径
+                        }
+                    }
+                }
+            }
+        }
+        //此处配置无效
+        release {
+            manifestPlaceholders = [
+                    EASEMOB_APPKEY: "",
+                    JPUSH_APPKEY  : "",
+            ]
+            buildConfigField "String", "EMQTT_URL", '""'
+            buildConfigField "String", "AGORA_APP_ID", '""'
+            buildConfigField "String", "JAVA_BASE_URL", '""'
+            buildConfigField "String", "EMQTT_USER", '""'
+            buildConfigField "String", "EMQTT_PASSWORD", '""'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        pickFirst 'lib/armeabi-v7a/libsecsdk.so'
+        exclude "lib/armeabi-v7a/libRSSupport.so"
+        exclude "lib/arm64-v8a/librsjni.so"
+        exclude "lib/arm64-v8a/libRSSupport.so"
+        exclude "lib/x86_64/libRSSupport.so"
+        exclude "lib/x86/librsjni.so"
+        exclude "lib/x86_64/librsjni.so"
+        exclude "lib/armeabi-v7a/librsjni.so"
+        exclude "lib/x86/libRSSupport.so"
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+
+
+MobSDK {
+    appKey "2af3d86e8170d"
+    appSecret "787cb826b9f820674c67b935387de3b2"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                appId "wx75a48a8d0acb2d18"
+                appSecret "f448071bc28e126eefe202638bbf9bfc"
+                sortId "1"
+            }
+            WechatMoments {
+                appId "wx75a48a8d0acb2d18"
+                appSecret "f448071bc28e126eefe202638bbf9bfc"
+                sortId "2"
+            }
+            QQ {
+                appId "101806933"
+                appKey "3ac63c3b30e34e16a24b5bd055681cf6"
+                sortId "3"
+            }
+            QZone {
+                appId "1558629401"
+                appKey "cuv8451d3ecop62f56bb896p9657ix86"
+                sortId "4"
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support.multidex
+    implementation project(':libcommon')
+    implementation project(path: ':wheelview')
+    implementation files('libs/SaaS_AdTracking_Android_SDK_V4.0.47.jar')
+    implementation 'org.jetbrains:annotations:15.0'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.anko:anko:$anko_version"
+
+    implementation project(path: ':easeui')
+
+    //网络请求框架
+    implementation 'com.lzy.net:okgo:3.0.4'
+
+    //指示器
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
+    //滚动选择器https://github.com/gzu-liyujiang/AndroidPicker
+    implementation('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+
+    //多图选择https://github.com/LuckSiege/PictureSelector
+
+    //    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation files('libs/alipaySdk-20180601.jar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'jp.wasabeef:richeditor-android:1.2.2'
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+
+    //二维码https://github.com/bingoogolapple/BGAQRCode-Android
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.4'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.github.ome450901:SimpleRatingBar:1.4.2'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    //    粒子爆炸
+
+    //    implementation 'com.plattysoft.leonids:LeonidsLib:1.3.2'
+
+    //    水波纹动画
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.google.android:flexbox:0.2.5'
+    implementation 'com.parse:parse-android:1.13.1'
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'
+    implementation 'cn.jiguang.sdk:jcore:2.2.6'
+    implementation files('libs/OpenInstall_v2.3.1.jar')
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+
+    // MQTT Eclipse paho
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.47.jar')
+    implementation 'com.android.support:support-dynamic-animation:28.0.0'//弹簧动画
+
+    implementation 'com.github.everhad:AndroidRatingStar:v1.0.4'
+    implementation 'com.github.dongjunkun:CouponView:1.0.4'
+    //annotationProcessor
+    annotationProcessor deps.butterknife_compiler
+    annotationProcessor deps.arouter_compiler
+    annotationProcessor deps.event_bus_compile
+
+    if (!moduleIndex.toBoolean()) {
+        implementation project(':module_index')
+    }
+    if (!moduleMe.toBoolean()) {
+        implementation project(':module_me')
+    }
+    if (!moduleNews.toBoolean()) {
+        implementation project(':module_news')
+    }
+
+    if (!moduleRoom.toBoolean()) {
+        implementation project(':module_room')
+    }
+
+    //一键登录
+    implementation files('libs/CMCCSSOSDK-WY-release.aar')
+    implementation files('libs/quicklogin_libary-external-release.aar')
+    implementation files('libs/Ui-factory_oauth_mobile_3.9.1.5.aar')
+    implementation files('libs/CTAccount_sdk_api_v3.7.0_all.aar')
+    implementation 'com.jacktuotuo.customview:verificationcodeview:1.0.5'
+
+
+    // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库）
+    implementation "com.umeng.umsdk:common:9.1.0"
+    implementation "com.umeng.umsdk:asms:1.1.3" // asms包依赖(必选)
+    implementation "com.umeng.umsdk:crash:0.0.4" // native crash包依赖(必选)
+    implementation "com.umeng.umsdk:oaid_lenovo:1.0.0"
+    implementation "com.umeng.umsdk:oaid_mi:1.0.0"
+//    implementation "com.umeng.umsdk:oaid_oppo:1.0.4"
+    implementation "com.umeng.umsdk:oaid_vivo:1.0.0.1"
+
+
+}
+

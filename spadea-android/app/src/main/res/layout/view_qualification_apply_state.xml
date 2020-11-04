@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_20">
+
+    <ImageView
+        android:id="@+id/iv_step1"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_26"
+        android:src="@mipmap/ic_apply_step_1_doing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_step2"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@mipmap/ic_apply_step_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_step3"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_26"
+        android:src="@mipmap/ic_apply_step_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_29"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_28"
+        android:scaleType="fitStart"
+        android:src="@mipmap/image_apply_step_1"
+        app:layout_constraintDimensionRatio="318:26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_step1" />
+
+    <TextView
+        android:id="@+id/tv_step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="技能认证"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_step1"
+        app:layout_constraintStart_toStartOf="@id/iv_step1"
+        app:layout_constraintTop_toBottomOf="@id/iv_state" />
+
+    <TextView
+        android:id="@+id/tv_step2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="修改头像"
+        android:textColor="@color/color_9c9c9c"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toEndOf="@id/iv_step2"
+        app:layout_constraintStart_toStartOf="@id/iv_step2"
+        app:layout_constraintTop_toBottomOf="@id/iv_state" />
+
+    <TextView
+        android:id="@+id/tv_step3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="提交审核"
+        android:textColor="@color/color_9c9c9c"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toEndOf="@id/iv_step3"
+        app:layout_constraintStart_toStartOf="@id/iv_step3"
+        app:layout_constraintTop_toBottomOf="@id/iv_state" />
+</android.support.constraint.ConstraintLayout>

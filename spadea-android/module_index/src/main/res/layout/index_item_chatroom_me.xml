@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/riv_user_head"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:riv_border_color="#E3E3E3"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="10dp"
+                tools:src="@color/color_FF88CF" />
+
+            <RelativeLayout
+                android:id="@+id/rl_lock"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/index_bg_normal_room_me_lock"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/riv"
+                app:layout_constraintEnd_toEndOf="@id/riv"
+                app:layout_constraintStart_toStartOf="@id/riv"
+                app:layout_constraintTop_toTopOf="@id/riv">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/index_ic_lock_room_list" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_room_labe"
+                    android:layout_width="37dp"
+                    android:layout_height="16dp"
+                    tools:background="@color/color_FF88CF"></ImageView>
+
+                <TextView
+                    android:id="@+id/tv_room_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:singleLine="true"
+                    android:textColor="#ff6d7278"
+                    android:textSize="14sp"
+                    tools:text="从VB长T儿童热污染翁驱蚊器" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_room_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffc9c9c9"
+                    android:textSize="12sp"
+                    tools:text="ID:3453453" />
+
+                <ImageView
+                    android:id="@+id/iv_hot"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/index_hot_anim" />
+
+                <TextView
+                    android:id="@+id/tv_popularity"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#ff6d7278"
+                    android:textSize="11sp"
+                    tools:text="9453" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/index_icon_clean"
+            android:visibility="gone"></ImageView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:background="#F2F2F2"></View>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:gravity="center"
+    android:paddingLeft="2.5dp"
+    android:paddingRight="2.5dp"
+    android:orientation="vertical">
+
+
+<!--    android:background="@drawable/shape_poolitem_bg"-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+    <FrameLayout
+        android:id="@+id/sp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/light"
+            android:background="@mipmap/icon_light"
+            />
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:padding="12dp"
+            android:alpha="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/iv_bg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:contentDescription="@null">
+
+
+        <ImageView
+            android:id="@+id/image"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null" />
+        
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        >
+
+        
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@mipmap/icon_coin"
+            />
+        
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="奖品名称"
+            android:textColor="@color/white"
+            android:textSize="11dp" />
+        
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="11dp"
+        android:text="潘多拉手链"
+        />
+
+
+</LinearLayout>

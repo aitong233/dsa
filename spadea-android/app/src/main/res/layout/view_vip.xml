@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:max="100"
+            android:progressDrawable="@drawable/bg_progressbar_vip"
+            android:thumb="@drawable/icon_music_volume"
+            android:thumbOffset="@dimen/dp_1" />
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_vip10"
+            android:gravity="center|right"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_4"
+            tools:text="10"
+            android:textColor="#fffefeff"
+            android:textSize="@dimen/sp_10"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_vip10"
+            android:gravity="center|right"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_4"
+            tools:text="10"
+            android:textColor="#fffefeff"
+            android:textSize="@dimen/sp_10"></TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

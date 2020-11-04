@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NewsItemView">
+        <attr name="NewsItemView_Icon" format="reference" />
+        <attr name="NewsItemView_Name" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_6"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_71"
+    android:background="@drawable/icon_item_balance">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="￥6"
+            android:textColor="#ffff4a60"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/tv_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="获得594金币"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_10" />
+
+    </LinearLayout>
+
+</RelativeLayout>

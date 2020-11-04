@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bubble"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_2"
+    android:paddingTop="@dimen/dp_5"
+    app:flexWrap="wrap"
+    android:paddingBottom="@dimen/dp_5"
+    app:justifyContent="flex_start"
+    android:layout_marginBottom="@dimen/dp_2"
+    android:background="@drawable/ease_row_pubilc_user_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/dp_9"
+    android:paddingLeft="@dimen/dp_3">
+
+    <com.qpyy.libcommon.widget.NobilityView
+        android:id="@+id/iv_nobility"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_3"
+        android:src="@drawable/img_emperor" />
+
+
+    <com.qpyy.libcommon.widget.RoleView
+        android:id="@+id/iv_role"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_3"
+        android:src="@mipmap/img_host" />
+
+
+
+    <com.qpyy.libcommon.widget.NewView
+        android:id="@+id/iv_new"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_3"
+        android:src="@mipmap/ic_user_new" />
+
+    <com.qpyy.libcommon.widget.GradeView
+        android:id="@+id/iv_grade"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dp_3"
+        android:src="@drawable/bg_grade20" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_5"
+        android:gravity="center"
+        android:text="饶利"
+        android:textColor="#ffb6a2ff"
+        android:textSize="@dimen/sp_13" />
+
+
+    <ImageView
+        android:id="@+id/iv_expression"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_3"/>
+
+</com.google.android.flexbox.FlexboxLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="90dp"
+    android:layout_height="117dp"
+    android:background="@drawable/tgb_bg_room_item">
+
+    <ImageView
+        android:id="@+id/iv_player"
+        android:layout_width="14dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/tgb_ic_player_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_player_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/5"
+        android:textColor="#7CA217"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_player"
+        app:layout_constraintStart_toStartOf="@id/iv_player"
+        app:layout_constraintTop_toBottomOf="@id/iv_player" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/tgb_pic_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="60dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/tgb_bg_nickname"
+        android:gravity="center"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:text="用户名"
+        android:textColor="#FFFFE2"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_head"
+        app:layout_constraintStart_toStartOf="@id/iv_head"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="玩法:"
+        android:textColor="#AB9F75"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nickname" />
+
+    <TextView
+        android:id="@+id/tv_play_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="最低接龙"
+        android:textColor="#DE781C"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+        app:layout_constraintStart_toEndOf="@id/tv1" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="局数:"
+        android:textColor="#AB9F75"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+    <TextView
+        android:id="@+id/tv_play_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="10局"
+        android:textColor="#DE781C"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv2"
+        app:layout_constraintStart_toEndOf="@id/tv2" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:includeFontPadding="false"
+        android:text="弹珠:"
+        android:textColor="#AB9F75"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+    <TextView
+        android:id="@+id/tv_protect_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="5000"
+        android:textColor="#DE781C"
+        android:textSize="9sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv3"
+        app:layout_constraintStart_toEndOf="@id/tv3" />
+
+</android.support.constraint.ConstraintLayout>

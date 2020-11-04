@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_7"
+    android:layout_marginTop="@dimen/dp_7"
+    android:layout_marginRight="@dimen/dp_7"
+    android:layout_marginBottom="@dimen/dp_7"
+    android:background="@drawable/bg_item_condition"
+    android:gravity="center"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_12"
+    android:text="红包"
+    android:textColor="#ff000000"
+    android:textSize="14sp">
+
+</TextView>

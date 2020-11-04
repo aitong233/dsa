@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!--说话动态图-->
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/iv_ripple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:autoPlay="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loopCount="0"
+        app:source="ripple.svga" />
+
+    <ImageView
+        android:id="@+id/riv_wheat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/room_ic_wheat_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.53" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/riv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.53" />
+
+    <ImageView
+        android:id="@+id/iv_sex"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/common_ic_headportriat_boy"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/riv"
+        app:layout_constraintEnd_toEndOf="@id/riv"
+        app:layout_constraintStart_toStartOf="@id/riv"
+        app:layout_constraintTop_toTopOf="@id/riv" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:maxLength="6"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        tools:text="麦位1"
+        tools:textColor="@color/color_black" />
+
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/iv_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        app:autoPlay="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loopCount="0"
+        tools:src="@mipmap/room_ic_station_wheat_gold" />
+
+    <com.qpyy.room.widget.WheatCharmView
+        android:id="@+id/charm_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <ImageView
+        android:id="@+id/iv_shutup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/room_ic_wheat_shutup"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/riv"
+        app:layout_constraintEnd_toEndOf="@id/riv"
+        tools:visibility="visible" />
+
+    <com.qpyy.libcommon.widget.ExpressionImgView
+        android:id="@+id/iv_face"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/riv"
+        app:layout_constraintEnd_toEndOf="@id/riv"
+        app:layout_constraintStart_toStartOf="@id/riv"
+        app:layout_constraintTop_toTopOf="@id/riv" />
+
+    <com.qpyy.libcommon.widget.GameImgView
+        android:id="@+id/game_imgview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+</android.support.constraint.ConstraintLayout>

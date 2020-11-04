@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <include layout="@layout/common_top_bar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_130"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/main_bg_fff_5">
+
+            <EditText
+                android:id="@+id/ed_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:maxLength="20"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_13"
+                android:background="@android:color/transparent"
+                android:gravity="top|left"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="@dimen/sp_14"></EditText>
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dp_15"
+                android:text="0/20"
+                android:textColor="#ff9c9c9c"
+                android:textSize="@dimen/sp_11"></TextView>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/main_bg_save"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_17"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

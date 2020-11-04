@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_top_bar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_FFF5F5F5"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/common_bg_main_edit"
+            android:hint="请输入备注"
+            android:maxLength="10"
+            android:paddingLeft="15dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/common_ic_edit_clear"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/et_remark"
+            app:layout_constraintEnd_toEndOf="@id/et_remark"
+            app:layout_constraintTop_toTopOf="@id/et_remark" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="10"
+            android:textColor="@color/color_FF6765FF"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/et_remark"
+            app:layout_constraintTop_toBottomOf="@id/et_remark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个字以内"
+            android:textColor="@color/color_c9c9c9"
+            android:textSize="11sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_num"
+            app:layout_constraintStart_toEndOf="@id/tv_num" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:background="@drawable/common_bg_r99_gradient_main_sold"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/color_white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

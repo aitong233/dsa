@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        //即构配置和声网配置
+        release {
+            buildConfigField "String", "ZEGO_APP_ID", '""'
+            buildConfigField "String", "ZEGO_APP_SIGN", '""'
+            buildConfigField "String", "AGORA_APP_ID", '""'
+        }
+        debug {
+            buildConfigField "String", "ZEGO_APP_ID", '""'
+            buildConfigField "String", "ZEGO_APP_SIGN", '""'
+            buildConfigField "String", "AGORA_APP_ID", '""'
+        }
+    }
+}
+
+dependencies {
+    api files('libs/agora-rtc-sdk.jar')
+    api files('libs/ZegoExpressEngine.jar')
+    implementation project(':libcommon')
+}

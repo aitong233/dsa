@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="375:322"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/room_bg_dialog_message_list"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/iv_dialog_interact_message_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/room_icon_back_ff"
+            />
+
+        <TextView
+            android:id="@+id/tv_interact_message_window_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="互动消息"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_interact_read_all_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一键已读"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_interact_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_interact_message_window_title"
+            android:layout_marginTop="20dp"
+            tools:listitem="@layout/room_rv_item_conversation"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

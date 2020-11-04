@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_top_bar" />
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="@dimen/dp_68"
+        android:background="@mipmap/image_name_identifyfail" />
+
+    <TextView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:textColor="@color/color_545454"
+        android:textSize="@dimen/sp_14"
+        tools:text="失败原因" />
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="@dimen/dp_139"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_r99_gradient_main"
+        android:gravity="center"
+        android:text="重新审核"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

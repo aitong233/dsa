@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_r99_gradient_main_stroke"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_voice_start"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/icon_play" />
+
+        <TextView
+            android:id="@+id/tv_voice_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="开始录音"
+            android:textColor="#6765FF"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/iv_voice_stop"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/icon_cease"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/dp_14"
+        android:layout_height="@dimen/dp_14"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp"
+        android:src="@mipmap/icon_closes" />
+</RelativeLayout>

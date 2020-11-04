@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="5dp"
+    app:hl_cornerRadius="10dp"
+    app:hl_isShowShadow="false"
+    app:hl_shadowBackColor="@color/color_white"
+    app:hl_shadowColor="@color/color_1A000000"
+    app:hl_shadowLimit="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_FF6765FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_bottom_left="10dp"
+            app:riv_corner_radius_top_left="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_lock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/index_bg_normal_room_lock"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/riv"
+            app:layout_constraintEnd_toEndOf="@id/riv"
+            app:layout_constraintStart_toStartOf="@id/riv"
+            app:layout_constraintTop_toTopOf="@id/riv">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/index_ic_lock_room_list" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_week_star"
+            android:layout_width="52dp"
+            android:layout_height="16dp"
+            tools:src="@mipmap/index_ic_week_star_normal_item"
+            app:layout_constraintStart_toStartOf="@id/riv"
+            app:layout_constraintTop_toTopOf="@id/riv" />
+
+        <ImageView
+            android:id="@+id/iv_online"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/index_hot_anim"
+            app:layout_constraintBottom_toBottomOf="@id/riv"
+            app:layout_constraintStart_toEndOf="@id/riv" />
+
+
+        <TextView
+            android:id="@+id/tv_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/color_FFCFCFCF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_online"
+            app:layout_constraintStart_toEndOf="@id/iv_online"
+            app:layout_constraintTop_toTopOf="@id/iv_online"
+            tools:text="17人" />
+
+        <TextView
+            android:id="@+id/tv_room_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/index_color_FFC9C9C9"
+            app:layout_constraintBottom_toBottomOf="@id/tv_online"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_online"
+            tools:text="ID:3453453" />
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="37dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/riv"
+            app:layout_constraintTop_toTopOf="@id/riv" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="从VB长T儿童热污染翁驱蚊器…"
+            android:textColor="@color/color_FF6D7278"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_tag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_tag"
+            app:layout_constraintTop_toTopOf="@id/iv_tag" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</com.lihang.ShadowLayout>

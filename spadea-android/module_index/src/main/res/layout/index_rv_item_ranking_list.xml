@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_FF6D7278"
+        android:textSize="12sp"
+        tools:text="1" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/riv_avatar"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@color/color_FF88CF"
+        app:riv_border_color="#FFFA447D"
+        app:riv_border_width="1dp"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="6"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/color_black"
+        android:textSize="14sp"
+        tools:text="利力星" />
+
+    <ImageView
+        android:id="@+id/iv_vip"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/iv_level"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
+        android:scaleType="fitCenter" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_charm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/index_bg_ranking_wealth"
+        android:gravity="center"
+        android:paddingLeft="22dp"
+        android:paddingTop="5.5dp"
+        android:paddingRight="6dp"
+        android:textColor="@color/color_white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/view_top2"
+        app:layout_constraintTop_toTopOf="@id/view_top2"
+        tools:text="6777" />
+
+
+</LinearLayout>

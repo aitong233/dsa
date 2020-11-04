@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">黑桃A</string>
+    <string name="connecting">请求网络中...</string>
+    <string name="exception_http">服务端响应码404和500！</string>
+    <string name="exception_parse">转换错误！</string>
+    <string name="exception_socket_time_out">网络请求超时！</string>
+    <string name="exception_unkownhost">网络连接失败，请连接网络！</string>
+    <string name="exception_storage">sd卡不存在或者没有权限！</string>
+    <string name="main_tab0">消息</string>
+    <string name="main_tab1">聊天室</string>
+    <string name="main_tab2">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_txt">"Hi，我在展展玩呢，大家都在玩，快来展展您的精彩~搜索我的手机号或展展号：%1s互动。http://zhanzhan.pro1.lnkj1.com"</string>
+    <string name="string_evaluate_hint">描述在10-500个字写下交易体会，可以帮助其他的朋友们参考</string>
+    <string name="agora_app_id">07a7f49426dd46cfa08002c3fa21a2ef</string>
+<!--    <string name="agora_app_id">3baa812402c24585a0c5dc39cac360ed</string>-->
+    <string name="at_your_in_group">%s在群聊中@了你</string>
+    <string name="msg_recall_by_user">%1$s 撤回了一条消息</string>
+    <string name="emojicon_test_name">示例</string>
+    <string name="msg_recall_by_self">您撤回了一条消息</string>
+
+
+    <string-array name="letter_list">
+        <item>#</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string name="la_sm1">1.帐号处于安全状态</string>
+    <string name="la_sm2">需在经常使用黑桃A的手机上提交注销帐号的申请。\n帐号未发送过被盗、被封等风险。且在最近一个月内未注销成功过。</string>
+    <string name="la_sm3">2.资产已结清</string>
+    <string name="la_sm4">钱包内货币:金币、优惠券已清空且无欠款，且无任何资金纠纷。\n钱包内收入:金币收入均已提现且无欠款。如有余额，注销成功后全部清零。</string>
+    <string name="la_sm5">3.平台权限已解除</string>
+    <string name="la_sm6">已解除黑桃A的主播权限、房间管理员和主持人身份。</string>
+    <string name="la_sm7">4.帐号内无进行中业务</string>
+    <string name="la_sm8">订单已完成超过7天。</string>
+    <string name="lc_con1">由于以下原因，暂时无法注销帐号</string>
+    <string name="lc_con2">抱歉，无法注销</string>
+    <string name="lc_con3">帐号处于风险状态</string>
+    <string name="game_rule" tools:ignore="MissingTranslation">
+        福袋游戏帮助\n
+1：福袋游戏之前需要有金币\n
+2：选择次数，然后点击开一次，开十次，开百次进行游戏\n
+3：黑桃A祝福：出现福袋黑桃A后，用户每次开福袋，黑桃A都会增加能量值，每次黑桃A能量值满后，都会生成1个礼物，最多生成5个礼物。当黑桃A有礼物时，每次开福袋，都有机会额外一次性获得所有的黑桃A礼物\n
+6：福袋游戏中的礼物，包含限定礼物，已下架礼物，专属礼物，未上线的礼物，每次都将不同。\n
+6：开福袋的礼物将会存放在您的“礼物背包”中，您可以随时送给心仪的玩家，也可以送给自己\n
+7：排行榜是根据您所获得的金币总额进行排行\n
+8：禁止一切线下交易，币商收购等不正当行为，平台对各类以盈利为目的的交易进行严厉打击\n
+    </string>
+</resources>

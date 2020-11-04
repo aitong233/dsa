@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingTop="30dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    tools:background="@color/color_1A000000">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/room_icon_back_ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_room_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:src="@mipmap/room_share_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_room_love"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/room_ic_follow"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@id/iv_room_share"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_room_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/room_ic_notice"
+        app:layout_constraintEnd_toStartOf="@id/iv_room_love"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.qpyy.libcommon.widget.MarqueeTextView
+        android:id="@+id/tv_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@color/transparent"
+        android:drawablePadding="8dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="200dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="米修:与y相遇相dfsfdsfdsfdsfdsfdsfdsfdsfdsfsf【游戏03】" />
+
+    <TextView
+        android:id="@+id/tv_room_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/room_bg_room_label"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="未知"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_room_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_room_name" />
+
+    <TextView
+        android:id="@+id/tv_room_id_after_label"
+        android:layout_width="15dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/room_bg_room_label"
+        android:gravity="center"
+        android:text="ID"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_room_label"
+        app:layout_constraintStart_toEndOf="@id/tv_room_label"
+        app:layout_constraintTop_toTopOf="@id/tv_room_label" />
+
+    <TextView
+        android:id="@+id/tv_room_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_room_id_after_label"
+        app:layout_constraintStart_toEndOf="@id/tv_room_id_after_label"
+        app:layout_constraintTop_toTopOf="@id/tv_room_id_after_label"
+        tools:text="12345" />
+
+    <TextView
+        android:id="@+id/tv_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@mipmap/room_pop"
+        android:drawablePadding="2dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_room_id"
+        app:layout_constraintStart_toEndOf="@id/tv_room_id"
+        app:layout_constraintTop_toTopOf="@id/tv_room_id" />
+
+
+</android.support.constraint.ConstraintLayout>

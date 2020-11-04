@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/img_full_2">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            tools:text="木屋是我自己设计的，坐落于春湖边上，木屋旁有木头做的木码头，还有一条长廊横坐在木屋前面朝春湖，长廊没有顶部但却有木架子 ，架子上有天然的绿色吊顶，它们长得很茂盛，有的垂坐在长廊上，有的半挂天，似女人的刘海一般自然垂下，每年都要开花，有紫色的黄蕊的，还有白色的带一点芳香。在长廊上正中央摆放了一张羊毛毯，上面有着我设计的图案，蓝色的海洋包围着残缺的像打在海岸上的浪一层层的涌上岸，岸是黄色的沙子，沙子上有点点绿斑如椰子树一般，五颜六色的动物在岸旁的草地上奔跑，羊群似白色的流水从山谷里跑出，还有银灰色的狼群在静候着，威猛的狮子橙黄色的毛，黑白色的牧羊犬在赶白色的流水"></TextView>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

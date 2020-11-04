@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_5"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_7"
+        android:src="@drawable/shape_r3_circle_c9" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:gravity="center_vertical"
+        android:text="填写资料（游戏ID、技能等级）、提交技能认证图片（游戏ID、等级）"
+        android:textColor="#afafaf"
+        android:textSize="@dimen/sp_11" />
+</LinearLayout>

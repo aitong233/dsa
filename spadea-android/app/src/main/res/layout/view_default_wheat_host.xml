@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_87"
+        android:layout_height="@dimen/dp_87">
+
+        <!--说话动态图-->
+        <com.opensource.svgaplayer.SVGAImageView
+            android:id="@+id/iv_ripple1"
+            android:layout_width="@dimen/dp_87"
+            android:layout_height="@dimen/dp_87"
+            app:autoPlay="false"
+            app:loopCount="1"
+            app:source="ripple.svga" />
+
+
+
+        <!--头像-->
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/roundedimage_view"
+            android:layout_width="@dimen/dp_67"
+            android:layout_height="@dimen/dp_67"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_def_up"
+            android:visibility="visible"
+            app:riv_oval="true" />
+
+        <!--        动画表情-->
+        <com.spadea.xqipao.utils.view.room.ExpressionImgView
+            android:id="@+id/iv_expression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_cover1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/bg_r99_fe8149_ff36ae"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_9" />
+
+        <ImageView
+            android:id="@+id/iv_mic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@drawable/room_icon_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/dp_60"
+            android:layout_centerInParent="true"
+            android:layout_height="@dimen/dp_60"></ImageView>
+
+     <com.spadea.xqipao.utils.view.GameImgView
+         android:id="@+id/game_imgview"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         ></com.spadea.xqipao.utils.view.GameImgView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="暂无主持"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+</LinearLayout>

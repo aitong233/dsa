@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_width="269dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="23dp"
+        android:background="@mipmap/index_bg_week_star_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="199dp"
+        android:layout_height="63dp"
+        android:background="@mipmap/index_bg_title_week_star_top"
+        android:gravity="center"
+        android:text="本周周星礼物"
+        android:textColor="@color/index_color_FFFF6F78"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_gift1"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_top"
+        app:layout_constraintEnd_toStartOf="@+id/iv_gift2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/iv_top"
+        app:layout_constraintTop_toTopOf="@id/iv_top" />
+
+    <ImageView
+        android:id="@+id/iv_gift2"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_gift1"
+        app:layout_constraintEnd_toEndOf="@id/iv_top"
+        app:layout_constraintStart_toEndOf="@id/iv_gift1"
+        app:layout_constraintTop_toTopOf="@id/iv_gift1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/index_bg_list_ranking"
+        android:paddingTop="20dp"
+        android:paddingBottom="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_top" />
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_my"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:hl_bottomShow="false"
+        app:hl_isShowShadow="true"
+        app:hl_leftShow="false"
+        app:hl_rightShow="false"
+        app:hl_shadowColor="#7AFE969D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/riv"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@color/color_FF88CF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_border_color="#FF514FFF"
+                app:riv_border_width="1dp"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_6D7278FF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/riv"
+                app:layout_constraintTop_toTopOf="@id/riv"
+                tools:text="Alan Bates" />
+
+            <ImageView
+                android:id="@+id/iv_icon_charm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@mipmap/index_ic_heart_wealth"
+                app:layout_constraintBottom_toBottomOf="@id/riv"
+                app:layout_constraintStart_toEndOf="@id/riv" />
+
+            <TextView
+                android:id="@+id/tv_charm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/color_black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_icon_charm"
+                app:layout_constraintStart_toEndOf="@id/iv_icon_charm"
+                app:layout_constraintTop_toTopOf="@id/iv_icon_charm"
+                tools:text="9070" />
+
+            <TextView
+                android:id="@+id/tv_rank_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_FF9C9C9C"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_icon_charm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_icon_charm"
+                tools:text="距上榜差 1232" />
+
+            <TextView
+                android:id="@+id/tv_rank_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="暂未上榜"
+                android:textColor="@color/color_FF6D7278"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_rank_no"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.lihang.ShadowLayout>
+
+</android.support.constraint.ConstraintLayout>

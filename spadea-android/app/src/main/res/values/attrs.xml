@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlideBar">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="isHight" format="boolean" />
+    </declare-styleable>
+
+    <!-- 圆形头像 -->
+    <declare-styleable name="CustomRoundView">
+        <attr name="border_width" format="dimension"></attr>
+        <attr name="border_color" format="color"></attr>
+    </declare-styleable>
+    <!---->
+    <declare-styleable name="GiftItemLayout">
+        <attr name="gift_index" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="progress" format="integer" />       <!--圆环进度-->
+    </declare-styleable>
+
+
+    <declare-styleable name="WheatView">
+        <attr name="IV_DefaultImg" format="reference"></attr>
+        <attr name="User_Visibility" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="ItemUserIntoView">
+        <attr name="user_into_index" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DefaultWheatView">
+        <attr name="default_pic" format="reference" />
+        <attr name="name_text_size" format="dimension" />
+        <attr name="head_bg" format="reference" />
+        <attr name="show_decoration" format="boolean" />
+        <attr name="show_host_tag" format="boolean" />
+        <attr name="rippleScale" format="float" />
+        <attr name="showUserName" format="boolean" />
+        <attr name="hide_xd" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DecorationHeadView">
+
+    </declare-styleable>
+
+    <declare-styleable name="IdentifyEditView">
+        <attr name="id_title" format="string" />
+        <attr name="id_hint" format="string" />
+        <attr name="id_icon" format="reference" />
+        <attr name="id_input_type" format="integer" />
+    </declare-styleable>
+
+    <!--WheelView 属性-->
+    <declare-styleable name="WheelView">
+        <!--set number of item displayed, default is 3-->
+        <attr name="npv_ShowCount" format="reference|integer" />
+        <!--set if show divider, default is true-->
+        <attr name="npv_ShowDivider" format="reference|boolean" />
+        <attr name="npv_DividerColor" format="reference|color" />
+        <attr name="npv_DividerMarginLeft" format="reference|dimension" />
+        <attr name="npv_DividerMarginRight" format="reference|dimension" />
+        <attr name="npv_DividerHeight" format="reference|dimension" />
+        <attr name="npv_TextColorNormal" format="reference|color" />
+        <attr name="npv_TextColorSelected" format="reference|color" />
+        <attr name="npv_TextColorHint" format="reference|color" />
+        <attr name="npv_TextSizeNormal" format="reference|dimension" />
+        <attr name="npv_TextSizeSelected" format="reference|dimension" />
+        <attr name="npv_TextSizeHint" format="reference|dimension" />
+        <attr name="npv_TextArray" format="reference" />
+        <attr name="npv_MinValue" format="reference|integer" />
+        <attr name="npv_MaxValue" format="reference|integer" />
+        <attr name="npv_WrapSelectorWheel" format="reference|boolean" />
+        <attr name="npv_HintText" format="reference|string" />
+        <attr name="npv_EmptyItemHint" format="reference|string" />
+        <attr name="npv_MarginStartOfHint" format="reference|dimension" />
+        <attr name="npv_MarginEndOfHint" format="reference|dimension" />
+        <attr name="npv_ItemPaddingHorizental" format="reference|dimension" />
+        <attr name="npv_ItemPaddingVertical" format="reference|dimension" />
+
+        <!--just used to measure maxWidth for wrap_content without hint,
+            the string array will never be displayed.
+            you can set this attr if you want to keep the wraped numberpickerview
+            width unchanged when alter the content list-->
+        <attr name="npv_AlternativeTextArrayWithMeasureHint" format="reference" />
+        <attr name="npv_AlternativeTextArrayWithoutMeasureHint" format="reference" />
+        <!--the max length of hint content-->
+        <attr name="npv_AlternativeHint" format="reference|string" />
+    </declare-styleable>
+    <declare-styleable name="RatingStarView">
+        <attr name="rsv_star_image" format="reference" />
+        <attr name="rsv_star_unselect_image" format="reference" />
+        <attr name="rsv_clickable" format="boolean" />
+        <attr name="rsv_score" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomWheelView">
+        <!-- 中间分割线外的item数量,整个滑动数量就为 wheelItemCount * 2 + 1  -->
+        <attr name="wheelItemCount" format="integer"/>
+        <!-- 滑轮item高度 -->
+        <attr name="wheelItemSize" format="dimension"/>
+        <!-- 分割线颜色 -->
+        <attr name="dividerColor" format="color"/>
+        <!-- 布局方向 -->
+        <attr name="wheelOrientation">
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="0"/>
+        </attr>
+        <!-- 水平布局时不考虑只参数,  当垂直布局时的左右靠齐立体效果 -->
+        <attr name="wheelGravity">
+            <enum name="left" value="1"/>
+            <enum name="center" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+
+        <!-- 两根分割线的距离 -->
+        <attr name="wheelDividerSize" format="dimension"/>
+    </declare-styleable>
+
+
+</resources>

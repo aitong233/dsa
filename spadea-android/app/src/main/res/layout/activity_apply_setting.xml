@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_top_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f8f8f8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_16"
+                android:text="接受邀请"
+                android:textColor="@color/color_9c9c9c"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新资质"
+                    android:textColor="@color/color_545454"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_add_apply"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:text="添加"
+                    android:textColor="@color/color_main"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_18">
+
+                <TextView
+                    android:id="@+id/tv_noti"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:text="呼叫邀约通知"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view_noti"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_106"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/color_f8f8f8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_noti" />
+
+                <View
+                    android:id="@+id/line_noti"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@color/color_f2"
+                    app:layout_constraintBottom_toBottomOf="@id/view_noti"
+                    app:layout_constraintEnd_toEndOf="@id/view_noti"
+                    app:layout_constraintStart_toStartOf="@id/view_noti"
+                    app:layout_constraintTop_toTopOf="@id/view_noti" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="闪电邀约"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toTopOf="@id/line_noti"
+                    app:layout_constraintStart_toStartOf="@id/view_noti"
+                    app:layout_constraintTop_toTopOf="@id/view_noti" />
+
+                <CheckBox
+                    android:id="@+id/cb_yy"
+                    android:layout_width="38dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="@dimen/dp_25"
+                    android:background="@drawable/selector_switch1"
+                    android:button="@null"
+                    app:layout_constraintBottom_toTopOf="@id/line_noti"
+                    app:layout_constraintEnd_toEndOf="@id/view_noti"
+                    app:layout_constraintTop_toTopOf="@id/view_noti" />
+
+                <TextView
+                    android:id="@+id/tv_auth_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="屏蔽未认证用户的信息"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_auth_subtitle"
+                    app:layout_constraintStart_toStartOf="@id/view_noti"
+                    app:layout_constraintTop_toBottomOf="@id/line_noti"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_auth_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="不接受无邀约成功记录用户的消息"
+                    android:textColor="@color/color_b4b4b4"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@id/view_noti"
+                    app:layout_constraintStart_toStartOf="@id/view_noti"
+                    app:layout_constraintTop_toBottomOf="@id/tv_auth_title" />
+
+                <CheckBox
+                    android:id="@+id/cb_auth"
+                    android:layout_width="38dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="@dimen/dp_25"
+                    android:background="@drawable/selector_switch1"
+                    android:button="@null"
+                    app:layout_constraintBottom_toBottomOf="@id/view_noti"
+                    app:layout_constraintEnd_toEndOf="@id/view_noti"
+                    app:layout_constraintTop_toBottomOf="@id/line_noti" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

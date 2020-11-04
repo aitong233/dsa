@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.spadea.xqipao.utils.view.room.DefaultWheatView
+            android:id="@+id/dwhv_host"
+            android:layout_width="@dimen/dp_85"
+            app:name_text_size="@dimen/sp_12"
+            android:layout_marginTop="@dimen/dp_10"
+            app:showUserName="false"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_host_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dwhv_host"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="暂无主持"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_12" />
+        <com.spadea.xqipao.utils.view.room.ContributionView
+            android:id="@+id/contribution_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat1"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat2"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat3"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat4"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat5"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat6"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat7"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.spadea.xqipao.utils.view.room.DefaultWheatView
+                android:id="@+id/df_wheat8"
+                android:layout_width="@dimen/dp_65"
+                app:name_text_size="@dimen/sp_9"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@mipmap/me_p21"
+        android:duration="50" />
+
+    <item
+        android:drawable="@mipmap/me_p1"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p2"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p3"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p4"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p5"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p6"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p7"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p8"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p9"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p10"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p11"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p12"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p13"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p14"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p15"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p17"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p18"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p19"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p20"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/me_p21"
+        android:duration="50" />
+
+
+</animation-list>

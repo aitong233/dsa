@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="336.5dp"
+    android:layout_height="506dp"
+    android:background="@mipmap/turntable_bg_record">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_record"
+        android:layout_width="281dp"
+        android:layout_height="345dp"
+        android:layout_marginTop="129dp"
+        android:background="@drawable/turntable_shape_help"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <com.qpyy.room.widget.SmallGiftAnimView
+        android:id="@+id/sgav1"
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.qpyy.room.widget.SmallGiftAnimView
+        android:id="@+id/sgav2"
+        android:clipChildren="false"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.qpyy.room.widget.SmallGiftAnimView
+        android:id="@+id/sgav3"
+        android:layout_marginTop="13dp"
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.spadea.xqipao.utils.view.room.DefaultWheatView
+        android:id="@+id/dwv_host"
+        android:layout_width="@dimen/dp_82"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        app:showUserName="false"
+        app:default_pic="@mipmap/ic_wheat_sofa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:name_text_size="@dimen/sp_13"
+        app:show_host_tag="true" />
+
+    <TextView
+        android:id="@+id/tv_host_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="暂无主持"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="@id/dwv_host"
+        app:layout_constraintStart_toStartOf="@id/dwv_host"
+        app:layout_constraintTop_toBottomOf="@id/dwv_host" />
+
+    <com.spadea.xqipao.utils.view.MarqueeTextView
+        android:id="@+id/tv_ad"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:paddingTop="@dimen/dp_7"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="@dimen/dp_150"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:textColor="@color/color_FAC500"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintEnd_toEndOf="@id/dwv_host"
+        app:layout_constraintStart_toStartOf="@id/dwv_host"
+        app:layout_constraintTop_toBottomOf="@id/tv_host_name"
+        android:text="公告：我是都非常温和kkkkukuukhsikriewuriewurioweuioruewoiruewioureiowurioewurioewurioeuw" />
+
+    <com.spadea.xqipao.utils.view.room.ContributionView
+        android:id="@+id/contribution_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dwv_host" />
+
+
+    <com.spadea.xqipao.utils.view.room.DefaultWheatView
+        android:id="@+id/df_wheat1"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        app:hide_xd="true"
+        app:default_pic="@mipmap/ic_wheat_sofa"
+        app:head_bg="@drawable/bg_head_guard_gold"
+        app:layout_constraintEnd_toStartOf="@+id/df_wheat2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ad"
+        app:name_text_size="@dimen/sp_10"
+        app:rippleScale="1.1"
+        app:show_decoration="false" />
+
+    <com.spadea.xqipao.utils.view.room.DefaultWheatView
+        android:id="@+id/df_wheat2"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        app:default_pic="@mipmap/ic_wheat_sofa"
+        app:hide_xd="true"
+        app:head_bg="@drawable/bg_head_guard_silver"
+        app:layout_constraintEnd_toStartOf="@+id/df_wheat3"
+        app:layout_constraintStart_toEndOf="@id/df_wheat1"
+        app:layout_constraintTop_toTopOf="@id/df_wheat1"
+        app:name_text_size="@dimen/sp_10"
+        app:rippleScale="1.1"
+        app:show_decoration="false" />
+
+    <com.spadea.xqipao.utils.view.room.DefaultWheatView
+        android:id="@+id/df_wheat3"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        app:default_pic="@mipmap/ic_wheat_sofa"
+        app:hide_xd="true"
+        app:head_bg="@drawable/bg_head_guard_bronze"
+        app:layout_constraintEnd_toStartOf="@+id/df_wheat4"
+        app:layout_constraintStart_toEndOf="@id/df_wheat2"
+        app:layout_constraintTop_toTopOf="@id/df_wheat1"
+        app:name_text_size="@dimen/sp_10"
+        app:rippleScale="1.1"
+        app:show_decoration="false" />
+
+    <com.spadea.xqipao.utils.view.room.DefaultWheatView
+        android:id="@+id/df_wheat4"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        app:default_pic="@mipmap/ic_wheat_sofa"
+        app:hide_xd="true"
+        app:head_bg="@drawable/bg_head_guard_bronze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/df_wheat3"
+        app:layout_constraintTop_toTopOf="@id/df_wheat1"
+        app:name_text_size="@dimen/sp_10"
+        app:rippleScale="1.1"
+        app:show_decoration="false" />
+
+    <ImageView
+        android:id="@+id/iv_host"
+        android:layout_width="@dimen/dp_53"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@mipmap/ic_host_list"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contribution_view" />
+
+    <ImageView
+        android:id="@+id/iv_guard"
+        android:layout_width="@dimen/dp_53"
+        android:layout_height="@dimen/dp_20"
+        android:background="@mipmap/ic_guard_list"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_host" />
+
+
+</android.support.constraint.ConstraintLayout>

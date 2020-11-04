@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Layout Styles-->
+
+    <style name="My_Info_Item_LL_Style">
+        <item name="android:layout_marginTop">@dimen/dp_0_5</item>
+        <item name="android:layout_height">@dimen/dp_53</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">@dimen/dp_20</item>
+        <item name="android:paddingRight">@dimen/dp_20</item>
+    </style>
+
+    <style name="My_Info_Item_Title_Style">
+        <item name="android:textColor">@color/color_text</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="My_Info_Item_Subtitle_Style">
+        <item name="android:textColorHint">@color/color_959595</item>
+        <item name="textColor">#ff666666</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:paddingLeft">@dimen/dp_10</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="My_Info_Item_Arrow_Style">
+        <item name="android:layout_marginLeft">@dimen/dp_10</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="srcCompat">@drawable/detail_icon_go</item>
+    </style>
+</resources>

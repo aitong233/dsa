@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF94DC"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/index_bg_week_star_list"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="375:667"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_bg_last"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/index_bg_last_week_star"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="375:667"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/index_bg_rank_tab"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginRight="-14dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="魅力榜"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hl_cornerRadius="24dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_isShowShadow="true"
+                app:hl_shadowBackColor="@color/color_white"
+                app:hl_shadowColor="@color/color_FF88CF"
+                app:hl_shadowLimit="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="魅力榜"
+                    android:textColor="#FF9797"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginRight="-14dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="房间榜"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_week"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:hl_cornerRadius="24dp"
+                app:hl_isShowShadow="true"
+                app:hl_shadowBackColor="@color/color_white"
+                app:hl_shadowColor="@color/color_FF88CF"
+                app:hl_shadowLimit="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="房间榜"
+                    android:textColor="#FF9797"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginRight="-14dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="贡献榜"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_month"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:hl_cornerRadius="24dp"
+                app:hl_isShowShadow="true"
+                app:hl_shadowBackColor="@color/color_white"
+                app:hl_shadowColor="@color/color_FF88CF"
+                app:hl_shadowLimit="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="贡献榜"
+                    android:textColor="#FF9797"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_week_star"
+        android:layout_width="54dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="226dp"
+        android:src="@mipmap/index_ic_last_week_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_week_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="ll_tab,view_pager,iv_week_star,iv_bg" />
+
+
+    <ImageView
+        android:id="@+id/iv_last_week_star"
+        android:layout_width="54dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="70dp"
+        android:src="@mipmap/index_ic_week_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_bg_last_week_star"
+        android:layout_width="357dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="52dp"
+        android:background="@mipmap/index_bg_info_last_week_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_last_week_star" />
+
+    <TextView
+        android:id="@+id/tv_title_last_week_star"
+        android:layout_width="151dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/index_bg_title_last_week_star"
+        android:gravity="center"
+        android:text="上周周星"
+        android:textColor="@color/index_color_FFFF6F78"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_last_week_star" />
+
+    <ImageView
+        android:id="@+id/bg_frame_top1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/index_image_header_week_star_top1"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg_last_week_star"
+        app:layout_constraintStart_toStartOf="@id/iv_bg_last_week_star"
+        app:layout_constraintTop_toTopOf="@id/iv_bg_last_week_star" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/riv_top1"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="2dp"
+        android:src="@color/color_FF6765FF"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_frame_top1"
+        app:layout_constraintStart_toStartOf="@+id/bg_frame_top1"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_name_top1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:textColor="@color/color_FF6D7278"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_vip1"
+        app:layout_constraintStart_toEndOf="@id/bg_frame_top1"
+        app:layout_constraintTop_toTopOf="@id/bg_frame_top1"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="初云" />
+
+    <LinearLayout
+        android:id="@+id/ll_vip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/bg_frame_top1"
+        app:layout_constraintStart_toEndOf="@id/bg_frame_top1"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_top1">
+
+        <ImageView
+            android:id="@+id/iv_vip1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/iv_level1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_charm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/index_bg_ranking_charm_gg"
+        android:gravity="center"
+        android:paddingLeft="22dp"
+        android:paddingTop="1dp"
+        android:paddingRight="6dp"
+        android:textColor="@color/color_white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/ll_vip1"
+        app:layout_constraintEnd_toEndOf="@id/iv_bg_last_week_star"
+        tools:text="6777" />
+
+    <LinearLayout
+        android:id="@+id/ll_top3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_bg_last_week_star">
+
+        <com.qpyy.module.index.widget.LastStar3View
+            android:id="@+id/lsv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.qpyy.module.index.widget.LastStar3View
+            android:id="@+id/lsv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.qpyy.module.index.widget.LastStar3View
+            android:id="@+id/lsv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <android.support.constraint.Group
+        android:id="@+id/group_last_week_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="iv_last_week_star,iv_bg_last_week_star,tv_title_last_week_star,ll_top3,tv_charm1,ll_vip1,tv_name_top1,riv_top1,bg_frame_top1,iv_bg_last" />
+
+
+</android.support.constraint.ConstraintLayout>

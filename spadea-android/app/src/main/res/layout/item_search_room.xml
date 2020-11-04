@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_77">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/riv"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_toRightOf="@+id/tv_index"
+        android:src="@drawable/default_avatar"
+        app:riv_oval="true" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_toRightOf="@+id/riv"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_girl"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_3"
+                android:textColor="#fff7f7f7"
+                android:textSize="@dimen/sp_8"
+                tools:text="男神" />
+
+            <TextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:textColor="#ff333333"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_13"
+                tools:text="F . 缘分天空" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_13"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_12"
+            tools:text="主持：V.无羡" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_host_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_25"
+        android:drawableLeft="@drawable/icon_room_host"
+        android:drawablePadding="@dimen/dp_5"
+        android:text="968"
+        android:textColor="#ffff8890"
+        android:textSize="@dimen/sp_15" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:layout_marginRight="@dimen/dp_25"
+        android:background="#FFE6E6E6"></View>
+
+</RelativeLayout>

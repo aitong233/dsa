@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="309dp"
+    android:layout_height="256dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="289dp"
+        android:layout_height="256dp"
+        android:background="@drawable/tgb_bg_record_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.yutang.game.tangguobao.widget.StrokeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:includeFontPadding="false"
+            android:text="游戏规则"
+            android:textColor="#FFF3C1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#CA6019"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/tv_context"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="0dp"
+            android:text=""
+            android:textColor="#BACAA1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
+        android:src="@drawable/tgb_btn_close_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

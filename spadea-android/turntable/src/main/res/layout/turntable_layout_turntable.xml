@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@mipmap/turntable_img_zhuanpan">
+
+    <View
+        android:id="@+id/v_center"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_gift_1"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="22"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_2"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="67"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_3"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="112"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_4"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="157"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_5"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="202"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_6"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="247"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_7"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="292"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_gift_8"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="337"
+        app:layout_constraintCircleRadius="70dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="defaultDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="DialogBottomIn" parent="android:Animation">
+        <item name="android:windowEnterAnimation" >@anim/pp_bottom_in</item>
+        <item name="android:windowExitAnimation" >@anim/pp_bottom_out</item>
+    </style>
+</resources>

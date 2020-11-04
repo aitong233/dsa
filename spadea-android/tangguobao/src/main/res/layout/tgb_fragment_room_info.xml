@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="289dp"
+    android:layout_height="255dp"
+    android:background="@drawable/tgb_bg_record_list">
+
+    <com.yutang.game.tangguobao.widget.StrokeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:includeFontPadding="false"
+        android:text="房间信息"
+        android:textColor="#FFF3C1"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#CA6019"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/tv_player_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="69dp"
+        android:text="游戏人数："
+        android:textColor="#85C4CF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_player_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/5"
+        android:textColor="#F6E25C"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_player_count_text"
+        app:layout_constraintStart_toEndOf="@id/tv_player_count_text" />
+
+    <TextView
+        android:id="@+id/tv_play_times_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="游戏局数："
+        android:textColor="#85C4CF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_player_count_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_player_count_text" />
+
+    <TextView
+        android:id="@+id/tv_play_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5局"
+        android:textColor="#F6E25C"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_play_times_text"
+        app:layout_constraintStart_toEndOf="@id/tv_play_times_text" />
+
+    <TextView
+        android:id="@+id/tv_money_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="每局龙珠："
+        android:textColor="#85C4CF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_player_count_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_play_times_text" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500"
+        android:textColor="#F6E25C"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_money_text"
+        app:layout_constraintStart_toEndOf="@id/tv_money_text" />
+
+    <TextView
+        android:id="@+id/tv_ruler_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="接龙规则："
+        android:textColor="#85C4CF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_player_count_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_money_text" />
+
+    <TextView
+        android:id="@+id/tv_ruler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最低接龙"
+        android:textColor="#F6E25C"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_ruler_text"
+        app:layout_constraintStart_toEndOf="@id/tv_ruler_text" />
+
+    <TextView
+        android:id="@+id/tv_bond_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="保证金："
+        android:textColor="#85C4CF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_player_count_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_ruler_text" />
+
+    <TextView
+        android:id="@+id/tv_bond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2500"
+        android:textColor="#F6E25C"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_bond_text"
+        app:layout_constraintStart_toEndOf="@id/tv_bond_text" />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="104dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="23dp"
+        android:src="@drawable/tgb_btn_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_enter"
+        android:layout_width="104dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="23dp"
+        android:src="@drawable/tgb_btn_enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

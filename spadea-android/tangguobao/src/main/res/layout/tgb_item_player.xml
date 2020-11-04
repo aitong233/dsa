@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="106dp"
+    android:layout_height="54dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_bg"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:background="@drawable/tgb_bg_item_other"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/tgb_pic_head"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:includeFontPadding="false"
+            android:text="ID:84569452"
+            android:textColor="#AD5600"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/iv_head"
+            app:layout_constraintTop_toTopOf="@id/iv_head" />
+
+        <TextView
+            android:id="@+id/tv_candy_num"
+            android:layout_width="40dp"
+            android:layout_height="13dp"
+            android:gravity="end"
+            android:paddingEnd="6dp"
+            android:text="0"
+            android:textColor="#FFE405"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_gift"
+            app:layout_constraintStart_toEndOf="@id/iv_gift"
+            app:layout_constraintTop_toTopOf="@id/iv_gift" />
+
+        <ImageView
+            android:id="@+id/iv_gift"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginBottom="11dp"
+            android:src="@drawable/tgb_pic_candy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.opensource.svgaplayer.SVGAImageView
+            android:id="@+id/svga"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            app:autoPlay="false"
+            app:clearsAfterStop="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:loopCount="1" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_prepare_status"
+        android:layout_width="28dp"
+        android:layout_height="22dp"
+        android:src="@drawable/tgb_pic_prepared"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

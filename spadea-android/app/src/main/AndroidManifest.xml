@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.spadea.yuyin">
+
+    <uses-sdk xmlns:tools="http://schemas.android.com/tools"
+        tools:overrideLibrary="cn.sharesdk.onekeyshare" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.spadea.yuyin.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 向SD卡中创建或者删除的权限 -->
+    <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:overrideLibrary="cn.sharesdk.onekeyshare"
+        tools:replace="android:label,android:name,android:networkSecurityConfig,android:icon,android:allowBackup">
+        <service android:name="com.spadea.xqipao.service.MyMqttService" />
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="com.openinstall.APP_KEY"
+            android:value="mtwxjv" />
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="D2CA5731F8434AB69F0A2FC0BC773D5C" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="${CHANNEL_ID}" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- 设置环信 -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 环信设置完成 -->
+        <!-- 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 修改成 true 覆盖 jcenter 上的组件。 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="true"
+            android:theme="@style/MyDialogStyle"
+            tools:node="replace">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="cn.jpush.android.ui.PopWinActivity" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity> <!-- 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 修改成 true 覆盖 jcenter 上的组件。 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.spadea.xqipao.service.XService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.spadea.xqipao.receiver.PushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.spadea.xqipao.service.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="com.spadea.xqipao.service.PollingService" />
+
+        <activity
+            android:name=".ui.fragment0.roomdetail.reprot.ReportActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.fragment2.setting.feedback.FeedBackActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="feedback"
+                    android:scheme="qpyy" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.fragment2.setting.invisiblesetting.InvisibleSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragment2.setting.messagesetting.MessageSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragment2.setting.nameverify.NameVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragment2.setting.mobilebind.MobileBindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragment2.setting.moblieverify.MobileVerifyActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <activity
+            android:name="com.spadea.xqipao.ui.SplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="token"
+                    android:scheme="talkingdata.d2ca5731f8434ab69f0a2fc0bc773d5c" />
+                <data android:scheme="mtwxjv" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".base.CustomPicturePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoAppTheme" />
+        <activity
+            android:name="com.spadea.xqipao.ui.live.activity.MusicSearchActivity"
+            android:keepScreenOn="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSplash" />
+        <activity android:name="com.spadea.xqipao.ui.ImageBrowseActivity" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SecondLevelPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.live.activity.RankingListActivity"
+            android:screenOrientation="portrait" /> <!-- 添加银行卡 -->
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.AddBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.BalanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.ProfitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.WithdrawalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.MyWalletsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.PaymentDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.login.activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.game.activity.CatFishingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.room.activity.AddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.room.activity.AdminListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.room.activity.RoomSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.room.activity.RoomInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.h5.H5Activity"
+            android:screenOrientation="portrait" /> <!-- 新项目开始 -->
+        <activity
+            android:name="com.spadea.xqipao.ui.home.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.QualificationAuditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.MeFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.GradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.ShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.KnapsackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SelectFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.home.activity.DistributeLeafletsHallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.home.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.chart.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.JueRenewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.JueUpgradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.login.activity.PerfectInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.login.activity.LabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.home.activity.ImgDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.room.activity.LiveRoomActivity"
+            android:keepScreenOn="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSplash" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.LatelyVisitActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.spadea.xqipao.ui.me.activity.AboutActivity" />
+        <activity
+            android:name="com.spadea.xqipao.ui.chart.activity.ContextMenuActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.CountrySelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.AccountSecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.spadea.xqipao.ui.DeBugActivity" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.ChangeMobileVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.ChangeMobileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.ChangePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.MessageSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.BlackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.room.fragment.SignDialogActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/CouponDetailShareDialogStyle" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SecondPasswordFirstSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.JoinGuildActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.MyGuildActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.NameIdentifyAcitivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.QualificationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.NameIdentifyFailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SkillSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.MyPhotosActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.ApplySettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.MyOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.OrderScoreActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.spadea.xqipao.ui.order.activity.ConfirmOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.spadea.xqipao.ui.order.activity.OrderNewsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.order.activity.OrderDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SecurityCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.SecurityCenterPromptedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.LogoutCannotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.LogoutAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.LogoutAccountValidationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cmic.sso.wy.activity.LoginAuthActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme.ActivityDialogStyle"
+            tools:replace="android:screenOrientation,android:configChanges" />
+        <activity
+            android:name="com.spadea.xqipao.ui.login.activity.CodeLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.login.activity.InputCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.login.activity.ImproveInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.SchemeFilterActivity"
+            android:theme="@style/Theme.SchemeFilter">
+            <intent-filter>
+                <data
+                    android:host="arouter"
+                    android:scheme="qpyy" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.spadea.xqipao.ui.chart.activity.ChatMoreActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name="com.spadea.xqipao.ui.chart.activity.RemarkNameActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name="com.spadea.xqipao.ui.chart.activity.ChatReportActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.qpyy.room.dialog.ModifyRoomNameDialog"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.TransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.spadea.xqipao.ui.me.activity.TransferUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <!-- 如果需要在Google官方应用市场(Google Play)上进行推广，则需要加上如下的配置，从而能够捕获Google Play Store的回调事件： -->
+        <receiver
+            android:name="com.tendcloud.appcpa.ReferralReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

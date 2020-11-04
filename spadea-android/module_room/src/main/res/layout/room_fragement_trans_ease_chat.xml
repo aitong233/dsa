@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_tip_close"
+        android:text="公屏已关闭"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffb6a2ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_70" />
+
+    <com.qpyy.room.widget.WelcomeAnimView
+        android:id="@+id/wav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/common_icon_newmsg"
+        android:paddingLeft="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_7"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_7"
+        android:text="3条新消息"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+
+</RelativeLayout>

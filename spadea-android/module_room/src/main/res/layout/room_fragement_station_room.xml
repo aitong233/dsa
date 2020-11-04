@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:background="@mipmap/room_bg">
+
+
+    <com.qpyy.room.widget.RoomStationWheatView
+        android:id="@+id/dhv_host"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:room_station_wheat_number="9" />
+
+    <ImageView
+        android:id="@+id/iv_guard_list"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="14dp"
+        android:src="@mipmap/room_ic_guard_list"
+        app:layout_constraintBottom_toBottomOf="@id/dhv_host"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.qpyy.room.widget.RoomStationWheatView
+        android:id="@+id/dhv5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/dhv6"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dhv_host"
+        app:room_station_pic="@mipmap/room_ic_station_wheat_gold"
+        app:room_station_wheat_number="5" />
+
+    <com.qpyy.room.widget.RoomStationWheatView
+        android:id="@+id/dhv6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/dhv7"
+        app:layout_constraintStart_toEndOf="@id/dhv5"
+        app:layout_constraintTop_toTopOf="@id/dhv5"
+        app:room_station_pic="@mipmap/room_ic_station_wheat_silver"
+        app:room_station_wheat_number="6" />
+
+    <com.qpyy.room.widget.RoomStationWheatView
+        android:id="@+id/dhv7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/dhv8"
+        app:layout_constraintStart_toEndOf="@id/dhv6"
+        app:layout_constraintTop_toTopOf="@id/dhv5"
+        app:room_station_pic="@mipmap/room_ic_station_wheat_bronze"
+        app:room_station_wheat_number="7" />
+
+    <com.qpyy.room.widget.RoomStationWheatView
+        android:id="@+id/dhv8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dhv7"
+        app:layout_constraintTop_toTopOf="@id/dhv5"
+        app:room_station_pic="@mipmap/room_ic_station_wheat_bronze"
+        app:room_station_wheat_number="8" />
+
+    <ImageView
+        android:id="@+id/iv_anchor_list"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/room_ic_anchor_list"
+        app:layout_constraintBottom_toBottomOf="@id/iv_guard_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_guard_list" />
+</android.support.constraint.ConstraintLayout>

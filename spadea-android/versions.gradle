@@ -1,0 +1,107 @@
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+
+def versions = [:]
+versions.android_gradle_plugin = "3.5.3"
+versions.kotlin = "1.3.31"
+versions.support = "28.0.0"
+versions.multidex = "1.0.2"
+versions.constraint_layout = "1.1.3"
+versions.glide = "4.9.0"
+versions.glide_transformations = "4.0.1"
+versions.rxjava2 = "2.2.6"
+versions.rx_android = "2.1.1"
+versions.retrofit = "2.3.0"
+versions.event_bus = "3.2.0"
+versions.persistent_cookie = "v1.0.1"
+versions.gson = "2.8.5"
+versions.fastjson = "1.2.55"
+versions.utils = "1.29.0"
+versions.logger = "2.2.0"
+versions.logging_interceptor = "3.8.1"
+versions.toast = "8.2"
+versions.smart_refresh = "1.1.0-alpha-20"
+versions.recycle_view_adpater_helper = "2.9.30"
+versions.rounded_image = "2.3.0"
+versions.butterknife = "9.0.0-rc3"
+//Arouter
+versions.arouter_compiler = "1.2.2"
+versions.arouter_api = "1.5.0"
+versions.flexbox = "1.0.0"
+versions.recyclerview_swipe = "1.3.2"
+versions.leakcanary = "2.4"
+
+
+def deps = [:]
+
+def support = [:]
+support.annotations = "com.android.support:support-annotations:$versions.support"
+support.app_compat = "com.android.support:appcompat-v7:$versions.support"
+support.v13 = "com.android.support:support-v13:$versions.support"
+support.percent = "com.android.support:percent:$versions.support"
+support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
+support.cardview = "com.android.support:cardview-v7:$versions.support"
+support.design = "com.android.support:design:$versions.support"
+support.v4 = "com.android.support:support-v4:$versions.support"
+support.core_utils = "com.android.support:support-core-utils:$versions.support"
+support.multidex = "com.android.support:multidex:$versions.multidex"
+deps.support = support
+
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofi"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.rxjava2_adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+deps.retrofit = retrofit
+
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+deps.kotlin = kotlin
+
+//view
+deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
+deps.toast = "com.hjq:toast:$versions.toast"
+deps.smart_refresh_layout = "com.scwang.smartrefresh:SmartRefreshLayout:$versions.smart_refresh"
+deps.smart_refresh_header = "com.scwang.smartrefresh:SmartRefreshHeader:$versions.smart_refresh"
+deps.recycle_view_adpater_helper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.recycle_view_adpater_helper"
+deps.rounded_image = "com.makeramen:roundedimageview:$versions.rounded_image"
+deps.glide_transformations = "jp.wasabeef:glide-transformations:$versions.glide_transformations"
+
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+//other
+deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
+deps.glide_webp = "com.zlc.glide:webpdecoder:1.6.$versions.glide"
+deps.glide_compiler="com.github.bumptech.glide:compiler:$versions.glide"
+deps.event_bus = "org.greenrobot:eventbus:$versions.event_bus"
+deps.event_bus_compile = "org.greenrobot:eventbus-annotation-processor:$versions.event_bus"
+deps.persistent_cookie = "com.github.franmontiel:PersistentCookieJar:$versions.persistent_cookie"
+deps.gson = "com.google.code.gson:gson:$versions.gson"
+deps.fastjson = "com.alibaba:fastjson:$versions.fastjson"
+deps.utils = "com.blankj:utilcode:$versions.utils"
+deps.logger = "com.orhanobut:logger:$versions.logger"
+deps.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.logging_interceptor"
+deps.butterknife_api = "com.jakewharton:butterknife:$versions.butterknife"
+deps.butterknife_compiler = "com.jakewharton:butterknife-compiler:$versions.butterknife"
+deps.arouter_api = "com.alibaba:arouter-api:$versions.arouter_api"
+deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+deps.flexbox = "com.google.android:flexbox:$versions.flexbox"
+deps.recyclerview_swipe = "com.yanzhenjie.recyclerview:support:$versions.recyclerview_swipe"
+deps.leakcanary = "com.squareup.leakcanary:leakcanary-android:$versions.leakcanary"
+
+ext.deps = deps
+
+def build_versions = [:]
+build_versions.min_sdk = 21
+build_versions.target_sdk = 28
+build_versions.build_tools = "28.0.3"
+ext.build_versions = build_versions
+

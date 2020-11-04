@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_topbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                style="@style/My_Info_Item_LL_Style"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/My_Info_Item_Title_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="账号与安全" />
+
+                <ImageView style="@style/My_Info_Item_Arrow_Style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_notification"
+                style="@style/My_Info_Item_LL_Style"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/My_Info_Item_Title_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="新消息通知" />
+
+                <ImageView style="@style/My_Info_Item_Arrow_Style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_privacy"
+                style="@style/My_Info_Item_LL_Style">
+
+                <TextView
+                    style="@style/My_Info_Item_Title_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="黑名单" />
+
+                <ImageView style="@style/My_Info_Item_Arrow_Style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_clear_cache"
+                style="@style/My_Info_Item_LL_Style"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/My_Info_Item_Title_Style"
+                    android:text="清除缓存" />
+
+                <TextView
+                    android:id="@+id/tv_cache"
+                    style="@style/My_Info_Item_Subtitle_Style"
+                    android:hint="0M" />
+
+                <ImageView style="@style/My_Info_Item_Arrow_Style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_feedback"
+                style="@style/My_Info_Item_LL_Style"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/My_Info_Item_Title_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="意见反馈" />
+
+                <ImageView style="@style/My_Info_Item_Arrow_Style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_about_us"
+                style="@style/My_Info_Item_LL_Style">
+
+                <TextView
+                    style="@style/My_Info_Item_Title_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="关于我们" />
+
+                <ImageView style="@style/My_Info_Item_Arrow_Style" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_logout"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="@dimen/dp_22"
+                android:background="@color/white"
+                android:text="退出登录"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

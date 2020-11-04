@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="128dp"
+    android:background="@drawable/ease_recording_hint_bg"
+    android:gravity="center"
+    android:minWidth="128dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/mic_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ease_record_animate_01"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/mic_image_cancel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:src="@drawable/ease_ic_record_back" />
+
+    <TextView
+        android:id="@+id/recording_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="2dp"
+        android:text="@string/move_up_to_cancel"
+        android:textColor="@color/color_white"
+        android:textSize="14sp" />
+
+</LinearLayout>

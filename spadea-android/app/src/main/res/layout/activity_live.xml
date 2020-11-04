@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_room_def" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="vertical">
+
+        <com.spadea.xqipao.utils.view.room.RoomHeadView
+            android:id="@+id/rv_roomheadview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:visibility="invisible" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!-- 礼物特效-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--   全屏礼物     -->
+        <com.spadea.xqipao.utils.view.room.animation.SvgaAnimationView
+            android:id="@+id/svgaanimationview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--   礼物飘窗     -->
+        <com.spadea.xqipao.utils.view.room.animation.RoomGiftView
+            android:id="@+id/roomgiftview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_250" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_50"
+            android:orientation="vertical">
+
+            <!--     礼物横幅       -->
+            <com.spadea.xqipao.widget.room.banner.GiftBannerView
+                android:id="@+id/gift_banner_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:visibility="gone" />
+
+            <!--     小猫钓鱼横幅       -->
+            <com.spadea.xqipao.widget.room.banner.GameBannerView
+                android:id="@+id/fullserviceview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_15"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_music_state"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_100"
+        android:background="@mipmap/bg_music"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/img_music_state" />
+
+    </RelativeLayout>
+
+    <com.spadea.xqipao.utils.view.room.MusicView
+        android:id="@+id/musicview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_80"
+        android:visibility="gone" />
+
+    <com.spadea.xqipao.utils.view.room.approach.ApproachView
+        android:id="@+id/approachview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_90" />
+
+
+</RelativeLayout>

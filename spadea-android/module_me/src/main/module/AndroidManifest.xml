@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qpyy.module.me">
+
+    <application
+        android:name="debug.MeApplication"
+        android:allowBackup="true"
+        android:networkSecurityConfig="@xml/common_network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
+        <activity android:name=".activity.MeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.EditInformationActivity" />
+        <activity android:name=".activity.PersonalSignatureActivity" />
+        <activity android:name=".activity.SearchFriendActivity" />
+        <activity android:name=".activity.MyFriendsActivity" />
+        <activity android:name=".activity.VisitActivity" />
+        <activity android:name=".activity.CreatedRoomActivity" />
+        <activity android:name=".activity.MNImageBrowserActivity" />
+        <activity android:name=".activity.UserDetailsActivity" />
+        <activity android:name=".activity.MNVedioBrowserActivity" />
+        <activity android:name=".activity.MyInviteCodeActivity"/>
+
+    </application>
+
+</manifest>

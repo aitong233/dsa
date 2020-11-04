@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_r5_white"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_8"
+        android:scaleType="center"
+        android:src="@mipmap/ic_name_identify" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textColor="@color/color_9c9c9c"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="请输入身份证号"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@color/color_545454"
+        android:textColorHint="@color/color_b4b4b4"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

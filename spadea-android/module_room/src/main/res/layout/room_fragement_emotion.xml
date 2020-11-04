@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:background="@mipmap/room_bg">
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv_host"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:room_wheat_number="9" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/dhv2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dhv_host"
+        app:room_wheat_number="1" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toStartOf="@+id/dhv3"
+        app:layout_constraintStart_toEndOf="@id/dhv1"
+        app:layout_constraintTop_toTopOf="@id/dhv1"
+        app:room_wheat_number="2" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toStartOf="@+id/dhv4"
+        app:layout_constraintStart_toEndOf="@id/dhv2"
+        app:layout_constraintTop_toTopOf="@id/dhv1"
+        app:room_wheat_number="3" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dhv3"
+        app:layout_constraintTop_toTopOf="@id/dhv1"
+        app:room_wheat_number="4" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/dhv6"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dhv1"
+        app:room_wheat_number="5" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv6"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toStartOf="@+id/dhv7"
+        app:layout_constraintStart_toEndOf="@id/dhv5"
+        app:layout_constraintTop_toTopOf="@id/dhv5"
+        app:room_wheat_number="6" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv7"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toStartOf="@+id/dhv8"
+        app:layout_constraintStart_toEndOf="@id/dhv6"
+        app:layout_constraintTop_toTopOf="@id/dhv5"
+        app:room_wheat_number="7" />
+
+    <com.qpyy.room.widget.RoomDefaultWheatView
+        android:id="@+id/dhv8"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dhv7"
+        app:layout_constraintTop_toTopOf="@id/dhv5"
+        app:room_wheat_number="8" />
+</android.support.constraint.ConstraintLayout>

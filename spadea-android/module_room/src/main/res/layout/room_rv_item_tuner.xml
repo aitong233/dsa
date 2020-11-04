@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="54dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_tuner_pic"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@mipmap/room_tuner_origin" />
+
+    <ImageView
+        android:id="@+id/iv_tuner_pic_cover"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@mipmap/room_tuner_mask" />
+
+    <TextView
+        android:id="@+id/tv_tuner_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_tuner_pic"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</RelativeLayout>

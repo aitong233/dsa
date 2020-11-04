@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="fitStart"
+        android:src="@mipmap/index_bg_charm_list"
+        app:layout_constraintDimensionRatio="375:667"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/index_bg_rank_tab"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginRight="-14dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="日榜"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hl_cornerRadius="24dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_isShowShadow="true"
+                app:hl_shadowBackColor="@color/color_white"
+                app:hl_shadowColor="#FF6BA4"
+                app:hl_shadowLimit="14dp">
+
+                <TextView
+                    android:id="@+id/tv_day_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="日榜"
+                    android:textColor="#FF6BA4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginRight="-14dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="周榜"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_week"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:hl_cornerRadius="24dp"
+                app:hl_isShowShadow="true"
+                app:hl_shadowBackColor="@color/color_white"
+                app:hl_shadowColor="@color/color_FF88CF"
+                app:hl_shadowLimit="14dp">
+
+                <TextView
+                    android:id="@+id/tv_week_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="周榜"
+                    android:textColor="#FF6BA4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginLeft="-14dp"-->
+<!--            android:layout_marginRight="-14dp"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_month"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:gravity="center"-->
+<!--                android:text="月榜"-->
+<!--                android:textColor="@color/color_white"-->
+<!--                android:textSize="16sp" />-->
+
+<!--            <com.lihang.ShadowLayout-->
+<!--                android:id="@+id/sl_month"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:visibility="gone"-->
+<!--                app:hl_cornerRadius="24dp"-->
+<!--                app:hl_isShowShadow="true"-->
+<!--                app:hl_shadowBackColor="@color/color_white"-->
+<!--                app:hl_shadowColor="@color/color_FF88CF"-->
+<!--                app:hl_shadowLimit="14dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_month_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="月榜"-->
+<!--                    android:textColor="#FF6BA4"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </com.lihang.ShadowLayout>-->
+
+<!--        </RelativeLayout>-->
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

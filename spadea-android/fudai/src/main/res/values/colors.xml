@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#19005B</color>
+    <color name="main_text">#FFFFFF</color>
+    <color name="check_color">#ABADFF</color>
+    <color name="uncheck_color">#1E1646</color>
+</resources>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="10dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/cl"
+    android:background="@color/color_FFEEEEEE">
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_et_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/et_keyboard_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="264"
+                android:background="@drawable/room_keyboard_et_bg"
+                android:hint="请输入数量"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:maxLength="4"
+                android:textSize="14sp"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/bt_keyboard_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="81"
+                android:background="@drawable/room_keyboard_ok_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_row1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_keyboard_et_layout"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/bt_keyboard1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="2"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="3"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_row2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_keyboard_row1"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/bt_keyboard4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="4"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="5"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="6"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_row3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_keyboard_row2"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/bt_keyboard7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="7"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="8"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="9"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_row4"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_keyboard_row3"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/bt_keyboard_null"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                />
+
+            <Button
+                android:id="@+id/bt_keyboard0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textColor="@color/color_FF333333"
+                android:gravity="center"
+                android:text="0"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/room_keyboard_num_bt_bg"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_keyboard_cross"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_keyboard_cross"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/room_keyboard_clean"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

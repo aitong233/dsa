@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/room_icon_vip_gray"
+        android:maxLevel="0" />
+    <item
+        android:drawable="@drawable/room_icon_vip_green"
+        android:maxLevel="1" />
+    <item
+        android:drawable="@drawable/room_icon_vip_blue"
+        android:maxLevel="2" />
+    <item
+        android:drawable="@drawable/room_icon_vip_orange"
+        android:maxLevel="3" />
+    <item
+        android:drawable="@drawable/room_icon_vip_violet"
+        android:maxLevel="4" />
+    <item
+        android:drawable="@drawable/room_icon_vip_hung1"
+        android:maxLevel="5" />
+    <item
+        android:drawable="@drawable/room_icon_vip_hung2"
+        android:maxLevel="6" />
+    <item
+        android:drawable="@drawable/room_icon_vip_hung3"
+        android:maxLevel="7" />
+    <item
+        android:drawable="@drawable/room_icon_vip_wang"
+        android:maxLevel="8" />
+</level-list>

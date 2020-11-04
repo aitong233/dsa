@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/riv_head_shop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintWidth_percent="0.2448"
+        android:src="@mipmap/room_hostframe"
+        />
+    
+    <TextView
+        android:id="@+id/tv_name_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/riv_head_shop"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_FF6D7278"
+        android:textSize="16sp"
+        android:text="头像框的名字"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_time_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_shop"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_time1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_time2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.291"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:textColor="@color/color_FF6765FF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="15天"
+            android:background="@drawable/room_bg_shop_time_txt_select"
+            />
+
+        <TextView
+            android:id="@+id/tv_time2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tv_time1"
+            app:layout_constraintRight_toLeftOf="@id/tv_time3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.291"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_FF6D7278"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="30天"
+            android:background="@drawable/room_bg_shop_time_txt_normal"
+            />
+
+        <TextView
+            android:id="@+id/tv_time3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.291"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/color_FF6D7278"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="永久"
+            app:layout_constraintLeft_toRightOf="@+id/tv_time2"
+            android:background="@drawable/room_bg_shop_time_txt_normal"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.080"
+        app:layout_constraintTop_toBottomOf="@+id/cl_time_shop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:text="赠送好友"
+            android:gravity="center"
+            android:textColor="@color/color_FF514FFF"
+            android:background="@drawable/room_bg_tv_pay_left"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:text="支付金币"
+            android:background="@drawable/room_bg_tv_pay_right"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    
+</android.support.constraint.ConstraintLayout>

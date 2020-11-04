@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/view_top_bar" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_gradient_guild"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_114"
+        android:layout_height="@dimen/dp_308"
+        android:layout_marginTop="@dimen/dp_26"
+        android:background="@mipmap/huawen02_guild"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_314"
+        android:layout_height="0dp"
+        android:background="@mipmap/huawen03_guild"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="314:369"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_frame"
+        android:layout_width="@dimen/dp_339"
+        android:layout_height="@dimen/dp_351"
+        android:layout_marginTop="@dimen/dp_120"
+        android:background="@mipmap/bgframe_image_guild"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <ImageView
+        android:id="@+id/iv_badge"
+        android:layout_width="@dimen/dp_268"
+        android:layout_height="@dimen/dp_197"
+        android:layout_marginTop="@dimen/dp_39"
+        android:background="@mipmap/badge_image_guild"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <TextView
+        android:id="@+id/tv_guild_name"
+        android:layout_width="@dimen/dp_76"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_38"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:gravity="center"
+        android:maxLines="3"
+        android:textColor="#FF7817"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_badge"
+        app:layout_constraintEnd_toEndOf="@id/iv_badge"
+        app:layout_constraintStart_toStartOf="@id/iv_badge"
+        app:layout_constraintTop_toTopOf="@id/iv_badge"
+        tools:text="KR视界凯瑞娱乐" />
+
+    <TextView
+        android:id="@+id/tv_guild_id"
+        android:layout_width="@dimen/dp_138"
+        android:layout_height="@dimen/dp_17"
+        android:layout_marginBottom="@dimen/dp_51"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/iv_badge"
+        app:layout_constraintEnd_toEndOf="@id/iv_badge"
+        app:layout_constraintStart_toStartOf="@id/iv_badge"
+        tools:text="公会ID：23242523423" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="@dimen/dp_252"
+        android:layout_height="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_11"
+        android:background="@mipmap/line_image_guild"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_badge" />
+
+    <TextView
+        android:id="@+id/tv_guild_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已加入公会"
+        android:textColor="@color/color_9c9c9c"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/iv_title"
+        app:layout_constraintEnd_toEndOf="@id/iv_title"
+        app:layout_constraintStart_toStartOf="@id/iv_title"
+        app:layout_constraintTop_toTopOf="@id/iv_title" />
+
+
+    <TextView
+        android:id="@+id/tv_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="1"
+        android:textColor="#FF5F5F"
+        android:textSize="120sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_guild_title" />
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="@dimen/dp_139"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_7"
+        android:background="@drawable/bg_border_action_guild"
+        android:gravity="center"
+        android:text="退出公会"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_frame" />
+
+
+</android.support.constraint.ConstraintLayout>

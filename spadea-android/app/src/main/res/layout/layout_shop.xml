@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_56"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/bg_knapsack_null"
+        android:paddingLeft="@dimen/dp_23"
+        android:paddingRight="@dimen/dp_23">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableRight="@mipmap/icon_right_kk"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="没有其他头像挂件，去获取"
+            android:textColor="#ffff8890"
+            android:textSize="@dimen/sp_13" />
+    </RelativeLayout>
+</RelativeLayout>

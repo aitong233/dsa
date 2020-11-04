@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_face_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="142dp">
+
+        <com.hyphenate.easeui.widget.emojicon.EaseEmojiconPagerView
+            android:id="@+id/pager_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="56dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_r99_e3e3e3"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ease_ic_delete_emoji_grey"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="56dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_r99_6765ff"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/color_white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconIndicatorView
+        android:id="@+id/indicator_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CFCFCF" />
+
+    <com.hyphenate.easeui.widget.emojicon.EaseEmojiconScrollTabBar
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+</LinearLayout>

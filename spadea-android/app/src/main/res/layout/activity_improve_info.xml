@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="50dip"
+        android:drawablePadding="5dp"
+        android:text="完善资料"
+        android:textColor="@color/color_black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="10dp"
+        app:hl_cornerRadius="27.5dp"
+        app:hl_shadowColor="#1A000000"
+        app:hl_shadowLimit="10dp">
+
+        <com.qpyy.libcommon.widget.ClearEditText
+            android:id="@+id/ed_nick_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:background="@drawable/bg_sex_uncheck"
+            android:hint="请输入昵称"
+            android:maxLength="10"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+    </com.lihang.ShadowLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rg_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_nan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:hl_cornerRadius="27.5dp"
+            app:hl_shadowColor="#1A000000"
+            app:hl_shadowLimit="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_nan"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/selector_sex">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/sex_boy"
+                    android:drawablePadding="30dip"
+                    android:gravity="center"
+                    android:text="男生"
+                    android:textColor="#FF5390FF"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_nv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:hl_cornerRadius="27.5dp"
+            app:hl_shadowColor="#1A000000"
+            app:hl_shadowLimit="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_nv"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_sex">
+
+                <TextView
+                    android:id="@+id/rb_nv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/sex_girl"
+                    android:drawablePadding="30dip"
+                    android:gravity="center"
+                    android:text="女生"
+                    android:textColor="#FFFF8890"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </com.lihang.ShadowLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请码"
+            android:textColor="@color/color_FF6D7278" />
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:hl_cornerRadius="27.5dp"
+            app:hl_shadowColor="#1A000000"
+            app:hl_shadowLimit="10dp">
+
+            <com.qpyy.libcommon.widget.ClearEditText
+                android:id="@+id/et_invite_code"
+                android:layout_width="match_parent"
+                android:layout_height="54dip"
+                android:background="@drawable/bg_sex_uncheck"
+                android:hint="不是必填项"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </com.lihang.ShadowLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/common_bg_btn"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="开启黑桃A之旅"
+        android:textColor="#fffefefe"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

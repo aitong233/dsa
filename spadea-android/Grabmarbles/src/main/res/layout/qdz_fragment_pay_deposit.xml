@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="297dp"
+    android:layout_height="207dp"
+    android:background="@drawable/qdz_bg_deposit">
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:lineSpacingExtra="5dp"
+        android:text="若成为接龙玩家，将会扣除预购弹珠金币为下一轮抢弹珠的发起金，其余玩家将免费获得弹珠，并退回预购弹珠金币"
+        android:textColor="#FFB253FF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:includeFontPadding="false"
+        android:text="缴纳保证金："
+        android:textColor="#FF8127C7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_deposit"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_deposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300金币"
+        android:textColor="#FFFB03A1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv1" />
+
+    <ImageView
+        android:id="@+id/iv_confirm"
+        android:layout_width="97dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/qdz_btn_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="97dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/qdz_btn_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

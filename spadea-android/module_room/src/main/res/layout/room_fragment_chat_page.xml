@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <include layout="@layout/room_head"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/room_notice_bg">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:src="@mipmap/room_hostframe"
+            app:riv_oval="true"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/name_icon"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/room_host_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/notice_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/name_icon"
+                    android:text="XXX"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/notice_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/room_notice_tool"
+                    />
+
+                <TextView
+                    android:id="@+id/notice_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/notice_icon"
+                    android:layout_marginLeft="5dp"
+                    android:text="公告"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/notice_dispatch_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="XXX"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/notice_take_time_t"
+                    />
+
+                <TextView
+                    android:id="@+id/notice_dispatch_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="本周派单"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+            
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="#66FFFFFF"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+
+                <TextView
+                    android:id="@+id/notice_take_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="XXX"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/notice_take_time_t"
+                    />
+
+                <TextView
+                    android:id="@+id/notice_take_time_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="平均耗时"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<!--    <android.support.constraint.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ln1"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="72dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toLeftOf="@+id/ln2"-->
+<!--            app:layout_constraintHorizontal_chainStyle="spread_inside">-->
+
+<!--            <com.makeramen.roundedimageview.RoundedImageView-->
+<!--                android:id="@+id/wheat_seat1"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:src="@mipmap/room_seat"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/seat1_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="XXX"-->
+<!--                android:gravity="center"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ln2"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="72dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_columnSpan="1">-->
+
+<!--            <com.makeramen.roundedimageview.RoundedImageView-->
+<!--                android:id="@+id/wheat_seat2"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:src="@mipmap/room_seat"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/seat2_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="XXX"-->
+<!--                android:gravity="center"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ln3"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="72dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_columnSpan="1">-->
+
+<!--            <com.makeramen.roundedimageview.RoundedImageView-->
+<!--                android:id="@+id/wheat_seat3"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:src="@mipmap/room_seat"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/seat3_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="XXX"-->
+<!--                android:gravity="center"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ln4"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="72dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_columnSpan="1">-->
+
+<!--            <com.makeramen.roundedimageview.RoundedImageView-->
+<!--                android:id="@+id/wheat_seat4"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:src="@mipmap/room_seat"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/seat4_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="XXX"-->
+<!--                android:gravity="center"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </android.support.constraint.ConstraintLayout>-->
+
+</LinearLayout>

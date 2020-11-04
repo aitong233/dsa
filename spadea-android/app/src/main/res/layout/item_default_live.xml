@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_73"
+    android:layout_marginTop="@dimen/dp_8"
+    android:background="@mipmap/bg_week_star_default">
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_58"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_3">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_head_img"
+            android:layout_width="@dimen/dp_58"
+            android:layout_height="@dimen/dp_58"
+            android:src="@drawable/default_avatar"
+            app:riv_oval="true" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_room_lock"
+            android:layout_width="@dimen/dp_58"
+            android:layout_height="@dimen/dp_58"
+            android:src="@mipmap/icon_home_room_lock"
+            android:visibility="gone"
+            app:riv_oval="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_week_star"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_15"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_1"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:background="@mipmap/ic_week_star_default"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginRight="@dimen/dp_50"
+        android:layout_toLeftOf="@+id/ll_right"
+        android:layout_toRightOf="@+id/rl_img"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/level_sex"
+                android:paddingLeft="@dimen/dp_7"
+                android:paddingTop="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_3"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_9"
+                tools:text="女神" />
+
+            <TextView
+                android:id="@+id/tv_room_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_14"
+                tools:text="能量派单..." />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_host_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:singleLine="true"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_11"
+            tools:text="主持:我是小可爱" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_host_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_room_host"
+            android:drawablePadding="@dimen/dp_5"
+            android:textColor="#ffff8890"
+            android:textSize="@dimen/sp_15"
+            tools:text="968" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="人气"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_11" />
+    </LinearLayout>
+
+</RelativeLayout>

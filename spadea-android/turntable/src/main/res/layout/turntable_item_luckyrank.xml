@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="281dp"
+    android:layout_height="55dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_box_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="寻宝动心宝箱"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_nickname"
+        app:layout_constraintStart_toEndOf="@id/civ_head"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_box_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_box_name" />
+
+    <TextView
+        android:id="@+id/tv_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#FF3FBE"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_box_name"
+        app:layout_constraintStart_toEndOf="@id/tv_box_name" />
+
+    <TextView
+        android:id="@+id/tv_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="获得"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_times"
+        app:layout_constraintStart_toEndOf="@id/tv_times" />
+
+    <TextView
+        android:id="@+id/tv_gift_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_text_1"
+        app:layout_constraintStart_toEndOf="@id/tv_text_1" />
+
+    <TextView
+        android:id="@+id/tv_gift_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#FF3FBE"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_gift_name"
+        app:layout_constraintStart_toEndOf="@id/tv_gift_name" />
+
+
+</android.support.constraint.ConstraintLayout>

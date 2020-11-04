@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_room_playing_dialog">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="公告"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_200"
+        android:paddingTop="@dimen/dp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_19"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            tools:text="
+                                只有该团队的超级管理员及管理员有权限添加团队成员。 在首页左侧功能栏中选择【添加成员】；
+
+方式一：链/ 接邀请 设置该成员的身份（权限）； 点击【生成邀请链/ 接】； 复制“邀请链/ 接”分享给你的同事即可。
+
+方式二：邮箱邀请 在【邮箱】栏中输入要邀请同事的邮箱； 设置这些成员的权限； 最后点击【发送邀请】； 被邀请成员会收到邀请邮件，只需点击邮件中的邀请链/ 接即可。
+
+移除团队成员
+
+只有该团队的超级管理员及管理员有权限移除团队成员。 在首页左侧功能栏中选择【管理团队】；
+
+进入团队管理页面，找到你要删除的成员，点击最右边成员身份，在下拉列表中点击【删除成员】即可。
+                            " />
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

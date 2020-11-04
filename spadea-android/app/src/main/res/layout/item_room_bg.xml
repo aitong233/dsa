@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_r4_fff6fb_colormain"
+    android:padding="@dimen/dp_2">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/riv_room_cover"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:layout_centerVertical="true"
+        app:riv_corner_radius="@dimen/dp_3" />
+
+
+</RelativeLayout>

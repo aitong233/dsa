@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#22FF9A9A"
+    android:layout_height="@dimen/dp_75">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"></ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:layout_toRightOf="@+id/iv_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/sp_11"
+            tools:text="小懒猫 . 动效" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/sp_11"
+            tools:text="永久" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_15"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_purchase_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/sp_10"
+            tools:text="购买日期 2019-10-15" />
+        <!--        img_un_use-->
+        <!--        img_use-->
+        <!--        bg_renew-->
+        <!--        img_be_overdue-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_14"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_un_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/img_un_use"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/img_use"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_renew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/bg_renew"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_be_overdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/img_be_overdue"></ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

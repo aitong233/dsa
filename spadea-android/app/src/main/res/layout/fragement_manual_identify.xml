@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <com.spadea.xqipao.widget.IdentifyEditView
+                android:id="@+id/iev_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_20"
+                app:id_hint="请输入姓名"
+                app:id_icon="@mipmap/ic_name_identify"
+                app:id_input_type="0"
+                app:id_title="姓名" />
+
+            <com.spadea.xqipao.widget.IdentifyEditView
+                android:id="@+id/iev_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                app:id_hint="请输入身份证号"
+                app:id_icon="@mipmap/ic_idcard_identify"
+                app:id_input_type="2"
+                app:id_title="身份证号" />
+
+            <com.spadea.xqipao.widget.IdentifyEditView
+                android:id="@+id/iev_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                android:visibility="gone"
+                app:id_hint="请输入手机号"
+                app:id_icon="@mipmap/ic_phone_identify"
+                app:id_input_type="1"
+                app:id_title="手机号" />
+
+
+            <com.spadea.xqipao.widget.IdentifyCodeView
+                android:id="@+id/icv_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/tv_tip_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="证件照上传"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_exam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/ic_eye_apply_voice"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:text="示例"
+                    android:textColor="@color/color_main"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/id_1"
+                    android:layout_width="@dimen/dp_129"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_idcard"
+                    app:layout_constraintDimensionRatio="162:90"
+                    app:layout_constraintEnd_toStartOf="@+id/id_2"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="7dp" />
+
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="@dimen/dp_129"
+                    android:layout_height="@dimen/dp_59"
+                    android:src="@mipmap/image_idcard1"
+                    app:layout_constraintBottom_toBottomOf="@id/id_1"
+                    app:layout_constraintEnd_toEndOf="@id/id_1"
+                    app:layout_constraintStart_toStartOf="@id/id_1"
+                    app:layout_constraintTop_toTopOf="@id/id_1" />
+
+                <ImageView
+                    android:id="@+id/iv_camera1"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@mipmap/ic_camera_idcard"
+                    app:layout_constraintBottom_toBottomOf="@id/id_1"
+                    app:layout_constraintEnd_toEndOf="@id/id_1"
+                    app:layout_constraintStart_toStartOf="@id/id_1"
+                    app:layout_constraintTop_toTopOf="@id/id_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="身份证正面"
+                    android:textColor="@color/color_b4b4b4"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@id/id_1"
+                    app:layout_constraintStart_toStartOf="@id/id_1"
+                    app:layout_constraintTop_toBottomOf="@id/id_1" />
+
+                <ImageView
+                    android:id="@+id/iv_shadow1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@mipmap/image_id_image_reupload"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/id_1"
+                    app:layout_constraintEnd_toEndOf="@id/id_1"
+                    app:layout_constraintStart_toStartOf="@id/id_1"
+                    app:layout_constraintTop_toTopOf="@id/id_1" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/id_2"
+                    android:layout_width="@dimen/dp_129"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dp_11"
+                    android:background="@drawable/bg_idcard"
+                    app:layout_constraintBottom_toBottomOf="@id/id_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/id_1"
+                    app:layout_constraintTop_toTopOf="@id/id_1"
+                    app:riv_corner_radius="7dp" />
+
+                <ImageView
+                    android:id="@+id/iv_2"
+                    android:layout_width="@dimen/dp_129"
+                    android:layout_height="@dimen/dp_59"
+                    android:src="@mipmap/image_idcard2"
+                    app:layout_constraintBottom_toBottomOf="@id/id_2"
+                    app:layout_constraintEnd_toEndOf="@id/id_2"
+                    app:layout_constraintStart_toStartOf="@id/id_2"
+                    app:layout_constraintTop_toTopOf="@id/id_2" />
+
+                <ImageView
+                    android:id="@+id/iv_camera2"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@mipmap/ic_camera_idcard"
+                    app:layout_constraintBottom_toBottomOf="@id/id_2"
+                    app:layout_constraintEnd_toEndOf="@id/id_2"
+                    app:layout_constraintStart_toStartOf="@id/id_2"
+                    app:layout_constraintTop_toTopOf="@id/id_2" />
+
+                <ImageView
+                    android:id="@+id/iv_shadow2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@mipmap/image_id_image_reupload"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/id_2"
+                    app:layout_constraintEnd_toEndOf="@id/id_2"
+                    app:layout_constraintStart_toStartOf="@id/id_2"
+                    app:layout_constraintTop_toTopOf="@id/id_2" />
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="身份证背面"
+                    android:textColor="@color/color_b4b4b4"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@id/id_2"
+                    app:layout_constraintStart_toStartOf="@id/id_2"
+                    app:layout_constraintTop_toBottomOf="@id/id_2" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/id_3"
+                    android:layout_width="@dimen/dp_129"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/bg_idcard"
+                    app:layout_constraintDimensionRatio="162:90"
+                    app:layout_constraintEnd_toEndOf="@id/id_1"
+                    app:layout_constraintStart_toStartOf="@id/id_1"
+                    app:layout_constraintTop_toBottomOf="@id/tv_1"
+                    app:riv_corner_radius="7dp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_camera3"
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@mipmap/ic_camera_idcard"
+                    app:layout_constraintBottom_toBottomOf="@id/id_3"
+                    app:layout_constraintEnd_toEndOf="@id/id_3"
+                    app:layout_constraintStart_toStartOf="@id/id_3"
+                    app:layout_constraintTop_toTopOf="@id/id_3" />
+
+                <ImageView
+                    android:id="@+id/iv_shadow3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@mipmap/image_id_image_reupload"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/id_3"
+                    app:layout_constraintEnd_toEndOf="@id/id_3"
+                    app:layout_constraintStart_toStartOf="@id/id_3"
+                    app:layout_constraintTop_toTopOf="@id/id_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:text="手持身份证"
+                    android:textColor="@color/color_b4b4b4"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@id/id_3"
+                    app:layout_constraintStart_toStartOf="@id/id_3"
+                    app:layout_constraintTop_toBottomOf="@id/id_3" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_r99_c9c9c9"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17"
+        android:textStyle="bold" />
+</RelativeLayout>

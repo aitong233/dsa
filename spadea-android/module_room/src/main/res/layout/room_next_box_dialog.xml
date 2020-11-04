@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/room_bg_next_box">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/room_next_close_icon" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:text="盲盒规则说明"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"
+            android:layout_below="@+id/title">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/me_bg_invite_code"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/invite_top_bar"
+        layout="@layout/common_top_bar_white" />
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/me_bg_second_invite_code"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="1356:1936"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invite_top_bar"
+        app:layout_constraintWidth_percent="0.755" />
+
+    <TextView
+        android:id="@+id/tv_user_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_FF6765FF"
+        android:textFontWeight="400"
+        android:textSize="54sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+        app:layout_constraintEnd_toEndOf="@id/iv_bg"
+        app:layout_constraintStart_toStartOf="@id/iv_bg"
+        app:layout_constraintTop_toTopOf="@id/iv_bg"
+        app:layout_constraintVertical_bias="0.69"
+        tools:text="123456" />
+
+    <ImageView
+        android:id="@+id/iv_copy"
+        android:layout_width="139dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="19dp"
+        android:background="@mipmap/me_ic_copy_invite_code"
+        app:layout_constraintEnd_toEndOf="@id/iv_bg"
+        app:layout_constraintStart_toStartOf="@id/iv_bg"
+        app:layout_constraintTop_toBottomOf="@id/iv_bg" />
+
+    <ImageView
+        android:layout_width="49dp"
+        android:layout_height="102dp"
+        android:background="@mipmap/me_ic_pp_left"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_bg"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <ImageView
+        android:layout_width="53dp"
+        android:layout_height="152dp"
+        android:background="@mipmap/me_ic_pp_right"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_bg"
+        app:layout_constraintVertical_bias="0.16" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/me_ic_pp_botoom"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="@id/iv_copy"
+        app:layout_constraintStart_toStartOf="@id/iv_copy"
+        app:layout_constraintTop_toBottomOf="@id/iv_copy" />
+
+
+</android.support.constraint.ConstraintLayout>

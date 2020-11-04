@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_60"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/riv"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        app:riv_border_color="@color/color_e5e5e5"
+        app:riv_border_width="@dimen/dp_2"
+        app:riv_corner_radius="@dimen/dp_5" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:singleLine="true"
+        android:text="冲浪少年"
+        android:textColor="@color/color_545454"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:singleLine="true"
+        android:text="10金币"
+        android:textColor="@color/color_a6a6a6"
+        android:textSize="@dimen/sp_12" />
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_root"
+    android:layout_width="248dp"
+    android:layout_height="46dp"
+    android:background="@drawable/qdz_bg_item_result_normal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/qdz_pic_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="用户昵称六字"
+        android:textColor="#FFB603BD"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@id/iv_head"
+        app:layout_constraintTop_toTopOf="@id/iv_head" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="ID:656436"
+        android:textColor="#FFB603BD"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_head"
+        app:layout_constraintStart_toEndOf="@id/iv_head"
+        app:layout_constraintTop_toBottomOf="@id/tv_nickname" />
+
+
+    <ImageView
+        android:id="@+id/iv_candy"
+        android:layout_width="23dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/qdz_icon_dz"
+        app:layout_constraintBottom_toTopOf="@id/iv_zuihoujielong"
+        app:layout_constraintEnd_toStartOf="@id/tv_candy_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_candy_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:includeFontPadding="false"
+        android:text="x235"
+        android:textColor="#FFB603BD"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_candy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_candy" />
+
+    <ImageView
+        android:id="@+id/iv_zuihoujielong"
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/qdz_jielong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_candy" />
+
+</android.support.constraint.ConstraintLayout>

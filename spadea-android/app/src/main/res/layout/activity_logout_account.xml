@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/bg_r10_white"
+                android:padding="15dip">
+
+                <ImageView
+                    android:id="@+id/iv_la_ico_bs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/logout_goodbye"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_ts_content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dip"
+                    android:textColor="@color/color_545454"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_la_ico_bs"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dip"
+                    android:text="注意，注销账户后以下信息将被清空且无法找回"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_ts_content1"
+                    tools:ignore="MissingConstraints" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/bg_r10_white"
+                android:padding="15dip">
+
+                <TextView
+                    android:id="@+id/tv_la_sm_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/la_sm1"
+                    android:textColor="@color/color_545454"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_sm_content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/la_sm2"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_title1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_sm_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/la_sm3"
+                    android:textColor="@color/color_545454"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_content1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_sm_content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/la_sm4"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_title2"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_sm_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/la_sm5"
+                    android:textColor="@color/color_545454"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_content2"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_sm_content3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/la_sm6"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_title3"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_la_sm_title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/la_sm7"
+                    android:textColor="@color/color_545454"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_content3"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dip"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/la_sm8"
+                    android:textColor="@color/color_9c9c9c"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_la_sm_title4"
+                    tools:ignore="MissingConstraints" />
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip">
+
+        <CheckBox
+            android:id="@+id/cb_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:button="@drawable/selector_logout_agreement" />
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/cb_agreement"
+            android:textColor="@color/color_9c9c9c"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm_logout"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="25dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="25dip"
+        android:background="@drawable/selector_logout"
+        android:gravity="center"
+        android:text="申请注销"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

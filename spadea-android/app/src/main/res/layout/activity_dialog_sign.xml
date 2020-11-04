@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_sign"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="336:536"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp_34"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_sign_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_bg" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_sign_title"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+        app:layout_constraintDimensionRatio="115:28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235"
+        app:layout_constraintWidth_percent="0.351" />
+
+    <TextView
+        android:id="@+id/tv_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="已连续签到 0 天"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_title" />
+
+    <ImageView
+        android:id="@+id/iv_day1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_13"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="64:79"
+        app:layout_constraintEnd_toStartOf="@+id/iv_day2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current"
+        app:layout_constraintWidth_percent="0.18"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_day2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="64:79"
+        app:layout_constraintEnd_toStartOf="@+id/iv_day3"
+        app:layout_constraintStart_toEndOf="@id/iv_day1"
+        app:layout_constraintTop_toTopOf="@id/iv_day1"
+        app:layout_constraintWidth_percent="0.18"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_day3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="64:79"
+        app:layout_constraintEnd_toStartOf="@+id/iv_day4"
+        app:layout_constraintStart_toEndOf="@id/iv_day2"
+        app:layout_constraintTop_toTopOf="@id/iv_day1"
+        app:layout_constraintWidth_percent="0.18"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_day4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_32"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="64:79"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_day3"
+        app:layout_constraintTop_toTopOf="@id/iv_day1"
+        app:layout_constraintWidth_percent="0.18"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_day5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_11"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="64:79"
+        app:layout_constraintEnd_toEndOf="@id/iv_day1"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/iv_day1"
+        app:layout_constraintTop_toBottomOf="@id/iv_day1"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_day6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="64:79"
+        app:layout_constraintEnd_toEndOf="@id/iv_day2"
+        app:layout_constraintStart_toStartOf="@id/iv_day2"
+        app:layout_constraintTop_toTopOf="@id/iv_day5"
+        app:layout_constraintWidth_percent="0.18"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_day7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/iv_day5"
+        app:layout_constraintEnd_toEndOf="@id/iv_day4"
+        app:layout_constraintStart_toStartOf="@id/iv_day3"
+        app:layout_constraintTop_toTopOf="@id/iv_day5"
+        app:layout_constraintWidth_percent="0.4055"
+        tools:src="@drawable/ic_sign_normal" />
+
+    <ImageView
+        android:id="@+id/iv_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_sign_action"
+        app:layout_constraintDimensionRatio="166:58"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_day5"
+        app:layout_constraintWidth_percent="0.5061" />
+
+    <ImageView
+        android:id="@+id/view_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:background="@drawable/bg_sign_bottom"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+        app:layout_constraintDimensionRatio="279:93"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_action"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_9"
+        android:layout_marginRight="@dimen/dp_31"
+        android:progressDrawable="@drawable/sign_progress_bg"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom">
+
+        <TextView
+            android:id="@+id/tv_reward1"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="使用3天"
+            android:textColor="#FF7E1F"
+            android:textSize="@dimen/sp_8" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_2">
+
+            <ImageView
+                android:id="@+id/iv_reward_1"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:contentDescription="@null"
+                tools:src="@mipmap/ic_51_1" />
+
+            <ImageView
+                android:id="@+id/iv_reward_cover_1"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_sign_complete"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_reward_name1"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:gravity="center"
+            android:text="劳动最光荣头像框"
+            android:textColor="#FF7E1F"
+            android:textSize="@dimen/sp_8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom">
+
+        <TextView
+            android:id="@+id/tv_reward_2"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="使用5天"
+            android:textColor="#FF7E1F"
+            android:textSize="@dimen/sp_8" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_2">
+
+            <ImageView
+                android:id="@+id/iv_reward_2"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:contentDescription="@null"
+                tools:src="@mipmap/ic_51_2" />
+
+            <ImageView
+                android:id="@+id/iv_reward_cover_2"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_sign_complete"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_reward_name2"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:gravity="center"
+            android:text="劳动最光荣头像框"
+            android:textColor="#FF7E1F"
+            android:textSize="@dimen/sp_8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom">
+
+        <TextView
+            android:id="@+id/tv_reward3"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="使用7天"
+            android:textColor="#FF7E1F"
+            android:textSize="@dimen/sp_8" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_2">
+
+            <ImageView
+                android:id="@+id/iv_reward_3"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:contentDescription="@null"
+                tools:src="@mipmap/ic_51_3" />
+
+            <ImageView
+                android:id="@+id/iv_reward_cover_3"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_sign_complete"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_reward_name3"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:gravity="center"
+            android:text="劳动最光荣头像框"
+            android:textColor="#FF7E1F"
+            android:textSize="@dimen/sp_8" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

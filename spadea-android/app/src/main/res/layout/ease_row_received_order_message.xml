@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_r99_color_dedede"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_3"
+        android:textSize="@dimen/sp_11"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_3"
+        android:text="收到一个新的订单"
+        android:textColor="@color/color_808080" />
+</LinearLayout>

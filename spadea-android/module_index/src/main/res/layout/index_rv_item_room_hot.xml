@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_FF6765FF"
+            app:layout_constraintDimensionRatio="167:150"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_week_star"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="@id/riv"
+            app:layout_constraintTop_toTopOf="@id/riv"
+            tools:src="@mipmap/index_ic_week_star_room_list" />
+
+        <LinearLayout
+            android:id="@+id/ll_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/index_bg_hot"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingRight="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/riv"
+            app:layout_constraintStart_toStartOf="@id/riv">
+
+            <ImageView
+                android:id="@+id/iv_hot"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@mipmap/index_ic_hot" />
+
+            <TextView
+                android:id="@+id/tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1.5dp"
+                android:maxLength="5"
+                android:textColor="@color/color_white"
+                android:textSize="11sp"
+                tools:text="213213" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="37dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ll_hot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_hot" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="梦想不足以让…"
+            android:textColor="@color/color_FF787D83"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/riv"
+            app:layout_constraintStart_toStartOf="@id/riv"
+            app:layout_constraintTop_toBottomOf="@id/riv" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="@color/color_FFCFCFCF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="沙松" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

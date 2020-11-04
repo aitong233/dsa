@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:gravity="center"
+    android:textColor="@color/room_selector_dialog_count_down_item"
+    android:textSize="@dimen/sp_16"
+    tools:text="一分钟">
+
+</TextView>

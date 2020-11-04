@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView
+        android:id="@+id/itemroomgiftview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        app:user_into_index="1"></com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView>
+
+    <com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView
+        android:id="@+id/itemroomgiftview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        app:user_into_index="2"></com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView>
+
+
+    <com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView
+        android:id="@+id/itemroomgiftview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        app:user_into_index="3"></com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView>
+
+
+    <com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView
+        android:id="@+id/itemroomgiftview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        app:user_into_index="4"></com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView>
+
+    <com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView
+        android:id="@+id/itemroomgiftview5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        app:user_into_index="5"></com.spadea.xqipao.utils.view.room.animation.ItemRoomGiftView>
+
+
+</LinearLayout>
